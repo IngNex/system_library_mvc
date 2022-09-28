@@ -64,7 +64,20 @@
                             Personas
                         </a>
                         <?php if ($_SESSION['rol'] == 1) { ?>
-                            <a class="nav-link active" href="<?php echo base_url(); ?>usuarios/listar">
+                            <a class="nav-link collapsed active" href="<?php echo base_url(); ?>/usuarios" data-toggle="collapse" data-target="#collapseUser" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-user fa-lg"></i></div>
+                            Usuarios
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down fa-lg"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseUser" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link active" href="<?php echo base_url(); ?>usuarios/listar"><div class="sb-nav-link-icon"><i class="fas fa-user fa-lg"></i>
+                                </div>Usuario</a>
+                                    <a class="nav-link active" href="<?php echo base_url(); ?>configuracion/listar"><div class="sb-nav-link-icon"><i class="fas fa-tools fa-lg"></i>
+                                </div>Configuración</a>
+                                </nav>
+                            </div>
+                            <!--<a class="nav-link active" href="<?php echo base_url(); ?>usuarios/listar">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user fa-lg"></i>
                                 </div>
                                 Usuarios
@@ -73,7 +86,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tools fa-lg"></i>
                                 </div>
                                 Configuración
-                            </a>
+                            </a>-->
                         <?php } ?>
                         <a class="nav-link collapsed active" href="<?php echo base_url(); ?>/libros" data-toggle="collapse" data-target="#collapseEst" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-file-pdf fa-lg"></i></div>
