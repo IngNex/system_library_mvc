@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Sistema de biblioteca</title>
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/img/icon.png" type="image/png">
+    <title>SysBiblioteca</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/styles.css" id="theme-stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/select2.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/dataTables.bootstrap4.min.css">
@@ -16,7 +17,7 @@
 
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
-        <a class="navbar-brand" href="<?php echo base_url(); ?>admin/listar">Vida Informático</a>
+        <a class="navbar-brand" href="<?php echo base_url(); ?>admin/listar">SysBiblioteca | MDM</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
         <!-- Navbar-->
         <ul class="navbar-nav ml-auto">
@@ -56,11 +57,11 @@
                         <a class="nav-link active" href="<?php echo base_url(); ?>materia">
                             <div class="sb-nav-link-icon"><i class="fas fa-list fa-lg"></i>
                             </div>
-                            Materia
+                            Materias
                         </a><a class="nav-link active" href="<?php echo base_url(); ?>estudiantes">
                             <div class="sb-nav-link-icon"><i class="fas fa-user-graduate fa-lg"></i>
                             </div>
-                            Estudiantes
+                            Personas
                         </a>
                         <?php if ($_SESSION['rol'] == 1) { ?>
                             <a class="nav-link active" href="<?php echo base_url(); ?>usuarios/listar">
@@ -88,10 +89,8 @@
 
                     </div>
                 </div>
-                <div class="sb-sidenav-footer bg-primary">
-                    <div class="small">Síguenos en: </div>
-                    <a href="https://web.facebook.com/Vida-Inform%C3%A1tico-102763128069281" class="text-white"><i class="fab fa-facebook-square"></i> Facebook</a>
-                    <a href="https://www.instagram.com/vida_informatico/" class="text-danger"><i class="fab fa-instagram-square"></i> Instagram</a>
+                <div class="sb-sidenav-footer bg-primary text-center">
+                        <img src="<?php echo base_url(); ?>Assets/img/muni.png" alt="mdm" width="100"/>
                 </div>
             </nav>
         </div>

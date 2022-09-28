@@ -35,7 +35,7 @@
                             <div class="card border-0 rounded-lg mt-5 sb-sidenav-dark">
                                 <div class="card-header text-center ">
                                     <h3 class="font-weight my-4">SysBiblioteca | MDM</h3>
-                                    <img class="img-thumbnail" src="<?php echo base_url(); ?>Assets/img/logo.jpg" width="150">
+                                    <img class="img-thumbnail" src="<?php echo base_url(); ?>Assets/img/municipalidad.png" width="250">
                                 </div>
                                 <div class="card-body">
                                     <form action="<?php echo base_url(); ?>Usuarios/login" method="post" autocomplete="off">
@@ -60,7 +60,7 @@
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Vida Informático</div>
+                        <div class="text-muted">Copyright &copy; SysBiblioteca | MDM - Sub Gerencia de Estadistica e Informatica</div>
                     </div>
                 </div>
             </footer>
