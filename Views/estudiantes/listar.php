@@ -2,7 +2,7 @@
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid">
-            <h5 class="text-center">Estudiantes</h5>
+            <h2 class="text-center">Lista - Personas</h2>
             <div class="row">
                 <div class="col-lg-12">
                     <button class="btn btn-primary mb-2" type="button" data-toggle="modal" data-target="#nuevoEstudiante"><i class="fas fa-user-plus"></i></button>
