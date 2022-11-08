@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Login</title>
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/img/icon.png" type="image/png">
+    <title>SysBiblioteca | Login</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/styles.css" id="theme-stylesheet">
 </head>
 
@@ -34,20 +35,20 @@
                         <div class="col-lg-5">
                             <div class="card border-0 rounded-lg mt-5 sb-sidenav-dark">
                                 <div class="card-header text-center ">
-                                    <h3 class="font-weight my-4">SysBiblioteca | MDM</h3>
+                                    <h3 class="font-weight my-4">SysBiblioteca <i class="fas fa-paper-plane"></i> | MDM</h3>
                                     <img class="img-thumbnail" src="<?php echo base_url(); ?>Assets/img/municipalidad.png" width="250">
                                 </div>
                                 <div class="card-body">
                                     <form action="<?php echo base_url(); ?>Usuarios/login" method="post" autocomplete="off">
                                         <div class="form-group">
-                                            <strong class="text-white">Usuario</strong>
+                                            <strong class="text-white"><i class="fas fa-user-tie"></i> Usuario</strong>
                                             <input id="usuario" class="form-control" type="text" name="usuario" placeholder="Usuario">
                                         </div>
                                         <div class="form-group">
-                                            <strong class="text-white">Contraseña</strong>
+                                            <strong class="text-white"><i class="fas fa-key"></i> Contraseña</strong>
                                             <input id="clave" class="form-control" type="password" name="clave" placeholder="Contraseña">
                                         </div>
-                                        <button class="btn btn-primary btn-block" type="submit">Ingresar</button>
+                                        <button class="btn btn-primary btn-block" type="submit">Ingresar <i class="fas fa-sign-in-alt fa-lg"></i></button>
                                     </form>
                                 </div>
                             </div>
@@ -66,9 +67,11 @@
             </footer>
         </div>
     </div>
+    <script src="<?php echo base_url(); ?>Assets/js/all.min.js"></script>
     <script src="<?php echo base_url(); ?>Assets/js/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>Assets/js/bootstrap.bundle.min.js"></script>
     <script src="<?php echo base_url(); ?>Assets/js/scripts.js"></script>
+    
     <script>
         $(document).ready(function() {
             $('#errorPass').toast('show');
