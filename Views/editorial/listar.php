@@ -5,13 +5,13 @@
             <div class="row">
                 <div class="col-lg-12">
                 <h2 class="text-center">Editorial de libros</h2>
-                    <button class="btn btn-primary mb-2" type="button" data-toggle="modal" data-target="#nuevoEditorial">Nuevo</button>
+                    <button class="btn btn-primary mb-2" type="button" data-toggle="modal" data-target="#nuevoEditorial"><i class="fas fa-plus-square"></i>&nbsp;&nbsp;Nuevo</button>
                     <div class="table-responsive">
                         <table class="table table-light mt-4" id="table">
                             <thead class="thead-dark">
                                 <tr>
                                     <th>Id</th>
-                                    <th>Nombre</th>
+                                    <th>Editorial</th>
                                     <th>Estado</th>
                                     <th>Accion</th>
                                 </tr>
@@ -29,6 +29,7 @@
                                         <td><?php echo $editorial['editorial']; ?></td>
                                         <td><?php echo $estado; ?></td>
                                         <td>
+                                            <div class="text-center">
                                             <a class="btn btn-primary" href="<?php echo base_url() ?>editorial/editar?id=<?php echo $editorial['id']; ?>"><i class="fas fa-edit"></i></a>
                                             <?php if ($editorial['estado'] == 1) { ?>
                                                 <form method="post" action="<?php echo base_url() ?>editorial/eliminar" class="d-inline eliminar">
@@ -40,7 +41,8 @@
                                                     <input type="hidden" name="id" value="<?php echo $editorial['id']; ?>">
                                                     <button class="btn btn-success" type="submit"><i class="fas fa-audio-description"></i></button>
                                                 </form>
-                                            <?php } ?>
+                                            <?php } ?>  
+                                            </div>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -54,7 +56,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title text-white" id="my-modal-title">Registro Editorial</h5>
+                        <h5 class="modal-title text-black" id="my-modal-title">Registro Editorial</h5>
                         <button class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -64,7 +66,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="nombre">Nombre</label>
+                                        <label for="nombre">Editorial</label>
                                         <input id="nombre" class="form-control" type="text" name="nombre" required placeholder="Nombre del editorial">
                                     </div>
                                 </div>
