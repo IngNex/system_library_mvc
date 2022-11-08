@@ -75,12 +75,18 @@
                                 <div class="form-group">
                                     <label for="codigo">Código</label>
                                     <input id="codigo" class="form-control" type="text" name="codigo" required placeholder="Codigo del estudiante">
+                                    
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="dni">Dni</label>
-                                    <input id="dni" class="form-control" type="text" name="dni" required placeholder="Dni">
+                                    <div class="input-group margin">
+                                    <input id="dni" class="form-control" type="text" name="dni" required placeholder="Dni" maxlength="8">
+                                    <span class="input-group-btn">
+                                        <button onclick="Buscar_reniec()" id="btn_reniec" title="Buscar por reniec" type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                                    </span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-12">

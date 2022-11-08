@@ -17,6 +17,8 @@
 <script src="<?php echo base_url(); ?>Assets/js/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url(); ?>Assets/js/dataTables.bootstrap4.min.js"></script>
 
+<script src="<?php echo base_url(); ?>Assets/js/api_dni.js"></script>
+
 <script>
     $(document).ready(function() {
         $('#table').DataTable({
