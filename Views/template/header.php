@@ -17,16 +17,18 @@
 
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
-        <a class="navbar-brand" href="<?php echo base_url(); ?>admin/listar">SysBiblioteca | MDM</a>
-        <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
+        <center><a class="navbar-brand" href="<?php echo base_url(); ?>admin/listar">SysBiblioteca <i class="fas fa-paper-plane"></i> | MDM</a></center>
+        <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars fa-lg"></i></button>
         <!-- Navbar-->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-capitalize" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nombre']; ?> <i class="fas fa-user fa-fw"></i></a>
+                <a class="nav-link dropdown-toggle text-capitalize" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle fa-lg"></i> <?php echo $_SESSION['nombre']; ?></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="<?php echo base_url(); ?>usuarios/perfil">Perfil</a>
+                    <a class="dropdown-item" href="<?php echo base_url(); ?>usuarios/perfil">
+                        <i class="fas fa-user-secret fa-lg"></i>&nbsp;&nbsp;Perfil</a>
+                        
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="<?php echo base_url(); ?>usuarios/salir">Salir</a>
+                    <a class="dropdown-item" href="<?php echo base_url(); ?>usuarios/salir"><i class="fas fa-sign-out fa-lg"></i></i>&nbsp;&nbsp;Salir&nbsp;</a>
                 </div>
             </li>
         </ul>
@@ -49,9 +51,18 @@
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link active" href="<?php echo base_url(); ?>libros">Libros</a>
-                                <a class="nav-link active" href="<?php echo base_url(); ?>autor">Autor</a>
-                                <a class="nav-link active" href="<?php echo base_url(); ?>editorial">Editorial</a>
+                                <a class="nav-link active" href="<?php echo base_url(); ?>libros">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-book-open fa-lg"></i></div>
+                                    Libros
+                                </a>
+                                <a class="nav-link active" href="<?php echo base_url(); ?>autor">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-user-edit fa-lg"></i></div>
+                                    Autor
+                                </a>
+                                <a class="nav-link active" href="<?php echo base_url(); ?>editorial">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-marker fa-lg"></i></div>
+                                    Editorial
+                                </a>
                             </nav>
                         </div>
                         <a class="nav-link active" href="<?php echo base_url(); ?>materia">
@@ -95,8 +106,14 @@
                         </a>
                         <div class="collapse" id="collapseEst" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>admin/pdf">Prestamos</a>
-                                <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>libros/pdf">Libros</a>
+                                <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>admin/pdf">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-file-download fa-lg"></i></div>
+                                    Prestamos
+                                </a>
+                                <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>libros/pdf">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-file-invoice fa-lg"></i></div>
+                                    Libros
+                                </a>
                             </nav>
                         </div>
 
