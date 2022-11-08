@@ -6,6 +6,7 @@ $arrUrl = explode("/", $url);
 $controller = $arrUrl[0];
 $methop = $arrUrl[0];
 $params = "";
+
 if (isset($arrUrl[1])) {
     if ($arrUrl[1] != "") {
         $methop = $arrUrl[1];
