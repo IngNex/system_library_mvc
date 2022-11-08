@@ -5,13 +5,13 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="text-center">Materias de Libros</h2>
-                    <button class="btn btn-primary mb-2" type="button" data-toggle="modal" data-target="#nuevoMateria"><i class="fas fa-plus-circle"></i></button>
+                    <button class="btn btn-primary mb-2" type="button" data-toggle="modal" data-target="#nuevoMateria"><i class="fas fa-folder-plus"></i>&nbsp;&nbsp;Nueva Materia</button>
                     <div class="table-responsive">
                         <table class="table table-light mt-4" id="table">
                             <thead class="thead-dark">
                                 <tr>
                                     <th>Id</th>
-                                    <th>Nombre</th>
+                                    <th>Materia</th>
                                     <th>Estado</th>
                                     <th>Accion</th>
                                 </tr>
@@ -57,7 +57,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-white" id="my-modal-title">Registro Materia</h5>
+                    <h5 class="modal-title text-black" id="my-modal-title">Registro Materia</h5>
                     <button class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -67,8 +67,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="nombre">Nombre</label>
-                                    <input id="nombre" class="form-control" type="text" name="nombre">
+                                    <label for="nombre">Materia</label>
+                                    <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Ingresar Materia">
                                 </div>
                             </div>
                             <div class="col-md-12">

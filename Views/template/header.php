@@ -45,15 +45,15 @@
                             </a>
                         <?php } ?>
                         <a class="nav-link collapsed active" href="<?php echo base_url(); ?>/libros" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                            <div class="sb-nav-link-icon"><i class="fas fa-book fa-lg"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-university fa-lg"></i></div>
                             Libros
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down fa-lg"></i></div>
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link active" href="<?php echo base_url(); ?>libros">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-book-open fa-lg"></i></div>
-                                    Libros
+                                    <div class="sb-nav-link-icon"><i class="fas fa-book fa-lg"></i></div>
+                                    Libro
                                 </a>
                                 <a class="nav-link active" href="<?php echo base_url(); ?>autor">
                                     <div class="sb-nav-link-icon"><i class="fas fa-user-edit fa-lg"></i></div>
@@ -66,7 +66,7 @@
                             </nav>
                         </div>
                         <a class="nav-link active" href="<?php echo base_url(); ?>materia">
-                            <div class="sb-nav-link-icon"><i class="fas fa-list fa-lg"></i>
+                            <div class="sb-nav-link-icon"><i class="fas fa-chalkboard fa-lg"></i>
                             </div>
                             Materias
                         </a><a class="nav-link active" href="<?php echo base_url(); ?>estudiantes">
