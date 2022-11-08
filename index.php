@@ -21,4 +21,9 @@ if (isset($arrUrl[2])) {
 }
 require_once("Libraries/Core/Autoload.php");
 require_once("Libraries/Core/Load.php");
+
+/*
+https://fontawesome.com/v5/search?q=add&o=r&s=solid
+https://www.w3schools.com/icons/fontawesome5_intro.asp
+*/
 ?>
