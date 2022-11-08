@@ -92,7 +92,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="nombre">Nombre</label>
-                                    <input id="nombre" class="form-control" type="text" name="nombre" required placeholder="Nombre completo">
+                                    <input style="text-transform:capitalize;" id="nombre" class="form-control" type="text" name="nombre" required placeholder="Nombre completo"  >
                                 </div>
                             </div>
                             <div class="col-md-12">

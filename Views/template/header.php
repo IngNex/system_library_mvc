@@ -28,7 +28,7 @@
                         <i class="fas fa-user-secret fa-lg"></i>&nbsp;&nbsp;Perfil</a>
                         
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="<?php echo base_url(); ?>usuarios/salir"><i class="fas fa-sign-out fa-lg"></i></i>&nbsp;&nbsp;Salir&nbsp;</a>
+                    <a class="dropdown-item" href="<?php echo base_url(); ?>usuarios/salir"><i class="fas fa-sign-in-alt fa-lg"></i>&nbsp;&nbsp;Salir&nbsp;</a>
                 </div>
             </li>
         </ul>
