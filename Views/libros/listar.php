@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="text-center">Libros de la biblioteca</h2>
-                    <button class="btn btn-primary mb-2" type="button" data-toggle="modal" data-target="#nuevoLibro">Nuevo</button>
+                    <button class="btn btn-primary mb-2" type="button" data-toggle="modal" data-target="#nuevoLibro"><i class="fas fa-folder-plus"></i>&nbsp;&nbsp;Nuevo Libro</button>
                     <div class="table-responsive">
                         <table class="table table-light mt-4" id="table">
                             <thead class="thead-dark">
@@ -18,7 +18,7 @@
                                     <th>Foto</th>
                                     <th>Estado</th>
                                     <th>Descripción</th>
-                                    <th></th>
+                                    <th>&nbsp;&nbsp;Acciones&nbsp;&nbsp;</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -35,10 +35,11 @@
                                         <td><?php echo $libro['autor']; ?></td>
                                         <td><?php echo $libro['editorial']; ?></td>
                                         <td><?php echo $libro['materia']; ?></td>
-                                        <td><img src="<?php echo base_url() ?>Assets/images/libros/<?php echo $libro['imagen']; ?>" width="150" class="img-thumbnail"></td>
+                                        <td><img src="<?php echo base_url() ?>Assets/images/libros/<?php echo $libro['imagen']; ?>" width="120" class="img-thumbnail"></td>
                                         <td><?php echo $estado ?></td>
                                         <td><?php echo $libro['descripcion']; ?></td>
                                         <td>
+                                            <div class="text-center">
                                             <a href="<?php echo base_url(); ?>libros/editar?id=<?php echo $libro['id']; ?>" class="btn btn-primary"><i class="fas fa-edit"></i></a>
                                             <?php if ($libro['estado'] == 1) { ?>
                                                 <form method="post" action="<?php echo base_url(); ?>libros/eliminar" class="d-inline eliminar">
@@ -51,6 +52,7 @@
                                                     <button class="btn btn-success" type="submit"><i class="fas fa-audio-description"></i></button>
                                                 </form>
                                             <?php } ?>
+                                            </div>
                                         </td>
                                     </tr>
                                 <?php } ?>
