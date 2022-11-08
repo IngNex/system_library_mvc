@@ -17,7 +17,7 @@
 
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
-        <center><a class="navbar-brand" href="<?php echo base_url(); ?>admin/listar">SysBiblioteca <i class="fas fa-paper-plane"></i> | MDM</a></center>
+        <div class="text-center"><a class="navbar-brand" href="<?php echo base_url(); ?>admin/listar">Sys<i class="fas fa-paper-plane"></i>Biblioteca | MDM</a></div>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars fa-lg"></i></button>
         <!-- Navbar-->
         <ul class="navbar-nav ml-auto">

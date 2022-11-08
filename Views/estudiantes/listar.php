@@ -2,9 +2,9 @@
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid">
-            <h2 class="text-center">Lista - Personas</h2>
             <div class="row">
                 <div class="col-lg-12">
+                    <h2 class="text-center">Personas</h2>
                     <button class="btn btn-primary mb-2" type="button" data-toggle="modal" data-target="#nuevoEstudiante"><i class="fas fa-user-plus"></i></button>
                     <div class="table-responsive">
                         <table class="table table-light mt-4" id="table">
@@ -37,6 +37,7 @@
                                         <td><?php echo $estudiante['direccion']; ?></td>
                                         <td><?php echo $estado; ?></td>
                                         <td>
+                                            <div class="text-center">
                                             <a class="btn btn-primary" href="<?php echo base_url() ?>estudiantes/editar?id=<?php echo $estudiante['id'] ?>"><i class="fas fa-edit"></i></a>
                                             <?php if ($estudiante['estado'] == 1) { ?>
                                                 <form method="post" action="<?php echo base_url() ?>estudiantes/eliminar" class="d-inline eliminar">
@@ -49,6 +50,7 @@
                                                     <button class="btn btn-success" type="submit"><i class="fas fa-audio-description"></i></button>
                                                 </form>
                                             <?php } ?>
+                                            </div>
                                         </td>
                                     </tr>
                                 <?php } ?>

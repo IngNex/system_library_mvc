@@ -4,6 +4,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
+                    <h2 class="text-center">Configuración de Biblioteca</h2>
                     <div class="card mt-3">
                         <div class="card-header">
                             Datos

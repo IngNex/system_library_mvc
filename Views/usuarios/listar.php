@@ -20,6 +20,7 @@
 
             <div class="row">
                 <div class="col-lg-12 mt-2">
+                <h2 class="text-center">Usuarios de Biblioteca</h2>
                     <div class="row">
                         <div class="col-lg-6 mb-2">
                             <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#nuevo_user">Nuevo</button>

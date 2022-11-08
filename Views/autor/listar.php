@@ -2,9 +2,9 @@
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid">
-            <h5 class="text-center">Autores</h5>
             <div class="row">
                 <div class="col-lg-12">
+                    <h2 class="text-center">Autores de libros</h2>
                     <button class="btn btn-primary mb-2" type="button" data-toggle="modal" data-target="#nuevoLibro">Nuevo</button>
                     <div class="table-responsive">
                         <table class="table table-light mt-4" id="table">

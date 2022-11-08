@@ -19,8 +19,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 p-2">
+                    <h2 class="text-center">Prestamos de Libros</h2>
                 <?php if ($_SESSION['rol'] == 1) { ?>
-                    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#prestar"><i class="fas fa-plus-circle"></i></button>
+                    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#prestar"><i class="fas fa-plus-circle"></i>&nbsp;&nbsp;Agregar Prestamo</button>
                 <?php } ?>
                 </div>
                 <div class="col-md-12">
@@ -34,7 +35,9 @@
                                 <th>Cant</th>
                                 <th>Observación</th>
                                 <th>Estado</th>
-                                <th></th>
+                                <th>
+                                    Confirmar
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
