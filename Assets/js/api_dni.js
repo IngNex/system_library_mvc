@@ -14,7 +14,7 @@ function Buscar_reniec() {
         url:'https://apiperu.net.pe/api/dni/'+dni,
         type:'GET',
         headers: { 
-            'Authorization':'Bearer PUdDnC9j4bYdfEu5RGT7V0g3upwxayhnNMzoTN8DLqSE4XqKSA',
+            'Authorization':'Bearer PUdDnC9j4bYdfEu5RGT7V0g3upwxayhnNMzoTN8DLqSE4XqKSA', 
             'Content-Type': 'application/json' ,
             'X-Requested-With': 'XMLHttpRequest',
         },
@@ -25,16 +25,19 @@ function Buscar_reniec() {
             //$("#txtdni").prop('disabled',true);
             //$("#btn_reniec").prop('disabled',true);
             $("#nombre").val(resp1['nombre_completo'].replace("'", ""));
+            $("#nombres").val(resp1['nombres'].replace("'", ""));
+            $("#apellido_paterno").val(resp1['apellido_paterno'].replace("'", ""));
+            $("#apellido_materno").val(resp1['apellido_materno'].replace("'", ""));
+            $("#departamento").val(resp1['departamento'].replace("'", ""));
+            $("#provincia").val(resp1['provincia'].replace("'", ""));
+            $("#distrito").val(resp1['distrito'].replace("'", ""));
             $("#direccion").val(resp1['direccion'].replace("'", ""));
-            /*$("#txtnombre").val(resp1['nombres'].replace("'", ""));
-            $("#txtapepat").val(resp1['apellido_paterno'].replace("'", ""));
-            $("#txtapemat").val(resp1['apellido_materno'].replace("'", ""));*/
         }else{
             $("#nombre").val("");
+            $("#nombres").val("");
+            $("#apellido_paterno").val("");
+            $("#apellido_materno").val("");
             $("#direccion").val("");
-            /*$("#txtnombre").val("");
-            $("#txtapepat").val("");
-            $("#txtapemat").val("");*/
             Swal.fire("Mensaje de Advertencia","<b style='color:#9B0000'>Lo sentimos el dni ingresado no se encuentro en los archivos de la reniec</b>","warning");
         }
     })

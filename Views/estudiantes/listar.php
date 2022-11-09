@@ -5,19 +5,20 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="text-center">Personas</h2>
-                    <button class="btn btn-primary mb-2" type="button" data-toggle="modal" data-target="#nuevoEstudiante"><i class="fas fa-user-plus"></i></button>
+                    <button class="btn btn-primary mb-2" type="button" data-toggle="modal" data-target="#nuevoEstudiante"><i class="fas fa-user-plus"></i>&nbsp;Nueva Persona</button>
+                    
                     <div class="table-responsive">
                         <table class="table table-light mt-4" id="table">
                             <thead class="thead-dark">
                                 <tr>
                                     <th>Id</th>
                                     <th>Código</th>
-                                    <th>Nombre</th>
-                                    <th>Carrera</th>
+                                    <th>Nombre Completo</th>
+                                    <th>Educación</th>
                                     <th>Teléfono</th>
                                     <th>Dirección</th>
-                                    <th>Estado</th>
-                                    <th>Accion</th>
+                                    <th>&nbsp;&nbsp;Estado&nbsp;&nbsp;</th>
+                                    <th>&nbsp;&nbsp;&nbsp;&nbsp;Accion&nbsp;&nbsp;&nbsp;&nbsp;</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -65,7 +66,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-white" id="my-modal-title">Registro Estudiante</h5>
+                    <h5 class="modal-title text-black" id="my-modal-title">Registro Persona</h5>
                     <button class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -93,26 +94,63 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="nombre">Nombre</label>
-                                    <input style="text-transform:capitalize;" id="nombre" class="form-control" type="text" name="nombre" required placeholder="Nombre completo"  >
+                                    <!--<label for="nombre">Nombre Completo</label>-->
+                                    <input style="text-transform:capitalize;" id="nombre" class="form-control" type="hidden" name="nombre" required placeholder="Nombre completo"  >
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="carrera">Carrera</label>
-                                    <input id="carrera" class="form-control" type="text" name="carrera" required placeholder="Carrera">
+                                    <label for="apellido_paterno">Apellido Paterno</label>
+                                    <input id="apellido_paterno" class="form-control" type="text" name="apellido_paterno" required placeholder="Apellido Paterno" >
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="telefono">Télefono</label>
-                                    <input id="telefono" class="form-control" type="text" name="telefono" required placeholder="Teléfono">
+                                    <label for="apellido_materno">Apellido Materno</label>
+                                    <input id="apellido_materno" class="form-control" type="text" name="apellido_materno" required placeholder="Apellido Materno" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nombres">Nombres</label>
+                                    <input id="nombres" class="form-control" type="text" name="nombres" required placeholder="Nombres" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="departamento">Departamento</label>
+                                    <input id="departamento" class="form-control" type="text" name="departamento" required placeholder="Departamento" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="provincia">Provincia</label>
+                                    <input id="provincia" class="form-control" type="text" name="provincia" required placeholder="Provincia" >
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="distrito">Distrito</label>
+                                    <input id="distrito" class="form-control" type="text" name="distrito" required placeholder="Apellido Materno" >
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="direccion">Dirección</label>
                                     <input id="direccion" class="form-control" type="text" name="direccion" required placeholder="Dirección">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="carrera">Nivel de Educación</label>
+                                    <input id="carrera" class="form-control" type="text" name="carrera" required placeholder="Nivel de Educación">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="telefono">Celular</label>
+                                    <input id="telefono" class="form-control" type="text" name="telefono" required placeholder="Teléfono">
                                 </div>
                             </div>
                             <div class="col-md-12">
