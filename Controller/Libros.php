@@ -112,7 +112,7 @@
             $pdf = new FPDF('P', 'mm', 'letter');
             $pdf->AddPage();
             $pdf->SetMargins(10, 10, 10);
-            $pdf->SetTitle("Prestamos");
+            $pdf->SetTitle("Libros | MDM");
             $pdf->SetFont('Arial', 'B', 16);
             $pdf->Cell(195, 15, utf8_decode('Biblioteca - Municipalidad de Mala'), 0, 1, 'C');
             $pdf->SetFont('Arial', 'B', 14);
@@ -120,23 +120,23 @@
             $pdf->image(base_url() . "/Assets/img/logo.png", 180, 15, 20, 20, 'PNG');
             $pdf->Ln(5);
             $pdf->SetMargins(10, 10, 10);
-            $pdf->SetTitle("libros");
+            /*$pdf->SetTitle("libros");*/
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetFillColor(0, 0, 0);
             $pdf->SetTextColor(255, 255, 255);
-            $pdf->Cell(196, 5, "Libros", 1, 1, 'C', 1);
+            $pdf->Cell(195, 8, "Libros de la Biblioteca", 1, 1, 'C', 1);
             $pdf->SetTextColor(0, 0, 0);
-            $pdf->Cell(11, 5, utf8_decode('N°'), 1, 0, 'L');
-            $pdf->Cell(100, 5, utf8_decode('Titulo'), 1, 0, 'L');
-            $pdf->Cell(70, 5, utf8_decode('Autor'), 1, 0, 'L');
-            $pdf->Cell(15, 5, 'Cant.', 1, 1, 'L');
+            $pdf->Cell(10, 6, utf8_decode('N°'), 1, 0, 'C');
+            $pdf->Cell(100, 6, utf8_decode('Titulo'), 1, 0, 'L');
+            $pdf->Cell(70, 6, utf8_decode('Autor'), 1, 0, 'L');
+            $pdf->Cell(15, 6, 'Cant.', 1, 1, 'C');
             $pdf->SetFont('Arial', '', 10);
             $contador = 1;
             foreach ($libros as $row) {
-                $pdf->Cell(11, 5, $contador, 1, 0, 'L');
-                $pdf->Cell(100, 5, utf8_decode($row['titulo']), 1, 0, 'L');
-                $pdf->Cell(70, 5, utf8_decode($row['autor']), 1, 0, 'L');
-                $pdf->Cell(15, 5, $row['cantidad'], 1, 1, 'L');
+                $pdf->Cell(10, 6, $contador, 1, 0, 'C');
+                $pdf->Cell(100, 6, utf8_decode($row['titulo']), 1, 0, 'L');
+                $pdf->Cell(70, 6, utf8_decode($row['autor']), 1, 0, 'L');
+                $pdf->Cell(15, 6, $row['cantidad'], 1, 1, 'C');
                 $contador++;
             }
             $pdf->Output("libros.pdf", "I");
