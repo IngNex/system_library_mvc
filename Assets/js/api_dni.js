@@ -11,10 +11,12 @@ function Buscar_reniec() {
         $("#dni").removeClass('is-invalid').addClass("is-valid");
     }
     $.ajax({
-        url:'https://apiperu.net.pe/api/dni/'+dni,
+        /*url:'https://apiperu.net.pe/api/dni/'+dni,*/
+        url:'https://apiperu.dev/api/dni/'+dni,
         type:'GET',
         headers: { 
-            'Authorization':'Bearer PUdDnC9j4bYdfEu5RGT7V0g3upwxayhnNMzoTN8DLqSE4XqKSA', 
+            /*'Authorization':'Bearer PUdDnC9j4bYdfEu5RGT7V0g3upwxayhnNMzoTN8DLqSE4XqKSA',*/
+            'Authorization':'Bearer 319a0fce2299a6bcfc7b561fd6ef90e6de5c285aeb2799018a54522d0462fa0c', 
             'Content-Type': 'application/json' ,
             'X-Requested-With': 'XMLHttpRequest',
         },

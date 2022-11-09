@@ -13,10 +13,11 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Código</th>
+                                    <th>DNI</th>
                                     <th>Nombre Completo</th>
                                     <th>Educación</th>
-                                    <th>Teléfono</th>
                                     <th>Dirección</th>
+                                    <th>Celular</th>
                                     <th>&nbsp;&nbsp;Estado&nbsp;&nbsp;</th>
                                     <th>&nbsp;&nbsp;&nbsp;&nbsp;Accion&nbsp;&nbsp;&nbsp;&nbsp;</th>
                                 </tr>
@@ -32,10 +33,11 @@
                                     <tr>
                                         <td><?php echo $estudiante['id']; ?></td>
                                         <td><?php echo $estudiante['codigo']; ?></td>
+                                        <td><?php echo $estudiante['dni']; ?></td>
                                         <td><?php echo $estudiante['nombre']; ?></td>
                                         <td><?php echo $estudiante['carrera']; ?></td>
-                                        <td><?php echo $estudiante['telefono']; ?></td>
                                         <td><?php echo $estudiante['direccion']; ?></td>
+                                        <td><?php echo $estudiante['telefono']; ?></td>
                                         <td><?php echo $estado; ?></td>
                                         <td>
                                             <div class="text-center">

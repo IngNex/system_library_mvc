@@ -19,7 +19,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="dni">Dni</label>
+                                            
+                                            <div class="input-group margin">
                                             <input id="dni" class="form-control" type="text" name="dni" value="<?php echo $data['dni']; ?>">
+                                            <span class="input-group-btn">
+                                                <button onclick="Buscar_reniec()" id="btn_reniec" title="Buscar por reniec" type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                                            </span>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
