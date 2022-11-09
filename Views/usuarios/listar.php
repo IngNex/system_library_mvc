@@ -23,7 +23,7 @@
                 <h2 class="text-center">Usuarios de Biblioteca</h2>
                     <div class="row">
                         <div class="col-lg-6 mb-2">
-                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#nuevo_user">Nuevo</button>
+                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#nuevo_user"><i class="fas fa-id-badge fa-lg"></i>&nbsp;Nuevo Usuario</button>
                         </div>
                     </div>
                     <div class="table-responsive">
@@ -56,10 +56,12 @@
                                         <td><?php echo $us['id']; ?></td>
                                         <td><?php echo $us['nombre']; ?></td>
                                         <td><?php echo $us['usuario']; ?></td>
-                                        <td><?php echo $rol; ?></td>
-                                        <td><?php echo $estado; ?></td>
+                                        <td class="text-center"><?php echo $rol; ?></td>
+                                        <td class="text-center"><?php echo $estado; ?></td>
                                         <td>
+                                            <div class="text-center">
                                             <a href="<?php echo base_url() ?>Usuarios/editar?id=<?php echo $us['id']; ?>" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                            
                                             <?php if ($us['estado'] == 1) { ?>
                                                 <form action="<?php echo base_url() ?>Usuarios/eliminar" method="post" class="d-inline eliminar">
                                                     <input type="hidden" name="id" value="<?php echo $us['id']; ?>">
@@ -71,6 +73,7 @@
                                                     <button type="submit" class="btn btn-success"><i class="fas fa-audio-description"></i></button>
                                                 </form>
                                             <?php } ?>
+                                            </div>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -85,7 +88,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-white" id="my-modal-title">Nuevo Usuario</h5>
+                    <h5 class="modal-title text-black" id="my-modal-title">Nuevo Usuario</h5>
                     <button class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

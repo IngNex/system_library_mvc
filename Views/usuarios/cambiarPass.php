@@ -11,11 +11,11 @@
                         <div class="col-md-6 m-auto">
                             <form method="post" action="<?php echo base_url();?>usuarios/cambiar">
                                 <div class="form-group">
-                                    <label for="actual">Contraseña actual</label>
+                                    <label for="actual"><i class="fas fa-unlock-alt"></i>&nbsp;Contraseña actual</label>
                                     <input id="actual" class="form-control" type="password" name="actual" placeholder="Contraseña Actual">
                                 </div>
                                 <div class="form-group">
-                                    <label for="nueva">Nueva Contraseña</label>
+                                    <label for="nueva"><i class="fas fa-lock"></i>&nbsp;Nueva Contraseña</label>
                                     <input id="nueva" class="form-control" type="password" name="nueva" placeholder="Contraseña Nueva">
                                 </div>
                                 <button class="btn btn-primary" type="submit">Cambiar</button>
