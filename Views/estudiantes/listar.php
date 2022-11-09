@@ -79,7 +79,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="codigo">Código</label>
-                                    <input id="codigo" class="form-control" type="text" name="codigo" required placeholder="Codigo del estudiante">
+                                    <input id="codigo" class="form-control" type="text" name="codigo" required placeholder="Codigo de la persona">
                                     
                                 </div>
                             </div>

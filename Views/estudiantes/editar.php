@@ -19,7 +19,6 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="dni">Dni</label>
-                                            
                                             <div class="input-group margin">
                                             <input id="dni" class="form-control" type="text" name="dni" value="<?php echo $data['dni']; ?>">
                                             <span class="input-group-btn">
