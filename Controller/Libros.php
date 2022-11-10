@@ -124,18 +124,20 @@
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetFillColor(0, 0, 0);
             $pdf->SetTextColor(255, 255, 255);
-            $pdf->Cell(195, 8, "Libros de la Biblioteca", 1, 1, 'C', 1);
+            $pdf->Cell(195, 10, "Libros de la Biblioteca", 1, 1, 'C', 1);
             $pdf->SetTextColor(0, 0, 0);
             $pdf->Cell(10, 6, utf8_decode('N°'), 1, 0, 'C');
-            $pdf->Cell(100, 6, utf8_decode('Titulo'), 1, 0, 'L');
+            $pdf->Cell(60, 6, utf8_decode('Titulo'), 1, 0, 'L');
             $pdf->Cell(70, 6, utf8_decode('Autor'), 1, 0, 'L');
+            $pdf->Cell(40, 6, utf8_decode('Editorial'), 1, 0, 'L');
             $pdf->Cell(15, 6, 'Cant.', 1, 1, 'C');
             $pdf->SetFont('Arial', '', 10);
             $contador = 1;
             foreach ($libros as $row) {
                 $pdf->Cell(10, 6, $contador, 1, 0, 'C');
-                $pdf->Cell(100, 6, utf8_decode($row['titulo']), 1, 0, 'L');
+                $pdf->Cell(60, 6, utf8_decode($row['titulo']), 1, 0, 'L');
                 $pdf->Cell(70, 6, utf8_decode($row['autor']), 1, 0, 'L');
+                $pdf->Cell(40, 6, utf8_decode($row['editorial']), 1, 0, 'L');
                 $pdf->Cell(15, 6, $row['cantidad'], 1, 1, 'C');
                 $contador++;
             }

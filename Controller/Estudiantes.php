@@ -67,5 +67,43 @@ class Estudiantes extends Controllers
         header("location: " . base_url() . "estudiantes");
         die();
     }
+    public function pdf()
+    {
+        $libros = $this->model->selectEstudiante();
+        require_once 'Libraries/pdf/fpdf.php';
+        $pdf = new FPDF('P', 'mm', 'letter');
+        $pdf->AddPage();
+        $pdf->SetMargins(10, 10, 10);
+        $pdf->SetTitle("Personas | MDM");
+        $pdf->SetFont('Arial', 'B', 16);
+        $pdf->Cell(195, 15, utf8_decode('Biblioteca - Municipalidad de Mala'), 0, 1, 'C');
+        $pdf->SetFont('Arial', 'B', 14);
+        $pdf->Cell(195, 10, utf8_decode('Lista de Personas'), 0, 1, 'C');
+        $pdf->image(base_url() . "/Assets/img/logo.png", 180, 15, 20, 20, 'PNG');
+        $pdf->Ln(5);
+        $pdf->SetMargins(10, 10, 10);
+        /*$pdf->SetTitle("libros");*/
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(0, 0, 0);
+        $pdf->SetTextColor(255, 255, 255);
+        $pdf->Cell(195, 10, "Registro de Personas", 1, 1, 'C', 1);
+        $pdf->SetTextColor(0, 0, 0);
+        $pdf->Cell(10, 6, utf8_decode('N°'), 1, 0, 'C');
+        $pdf->Cell(25, 6, utf8_decode('DNI'), 1, 0, 'L');
+        $pdf->Cell(100, 6, utf8_decode('Nombre Completo'), 1, 0, 'L');
+        $pdf->Cell(30, 6, utf8_decode('Estudio'), 1, 0, 'L');
+        $pdf->Cell(30, 6, 'Celular', 1, 1, 'L');
+        $pdf->SetFont('Arial', '', 10);
+        $contador = 1;
+        foreach ($libros as $row) {
+            $pdf->Cell(10, 6, $contador, 1, 0, 'C');
+            $pdf->Cell(25, 6, $row['dni'], 1, 0, 'C');
+            $pdf->Cell(100, 6, utf8_decode($row['nombre']), 1, 0, 'L');
+            $pdf->Cell(30, 6, utf8_decode($row['carrera']), 1, 0, 'C');
+            $pdf->Cell(30, 6, utf8_decode($row['telefono']), 1, 1, 'C');
+            $contador++;
+        }
+        $pdf->Output("personas.pdf", "I");
+    }
 }
 ?>

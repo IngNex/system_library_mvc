@@ -106,14 +106,19 @@
                         </a>
                         <div class="collapse" id="collapseEst" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>admin/pdf">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-file-download fa-lg"></i></div>
-                                    Prestamos
+                                <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>estudiantes/pdf">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-address-book fa-lg"></i></div>
+                                    Personas
                                 </a>
                                 <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>libros/pdf">
                                     <div class="sb-nav-link-icon"><i class="fas fa-file-invoice fa-lg"></i></div>
                                     Libros
                                 </a>
+                                <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>admin/pdf">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-file-download fa-lg"></i></div>
+                                    Prestamos
+                                </a>
+                                
                             </nav>
                         </div>
 
