@@ -41,14 +41,14 @@
                                 <div class="card-body">
                                     <form action="<?php echo base_url(); ?>Usuarios/login" method="post" autocomplete="off">
                                         <div class="form-group">
-                                            <strong class="text-white"><i class="fas fa-user-tie"></i> Usuario</strong>
-                                            <input id="usuario" class="form-control" type="text" name="usuario" placeholder="Usuario">
+                                            <h3 class="text-white"><i class="fas fa-user-tie"></i> Usuario</h3>
+                                            <input id="usuario" class="form-control" type="text" name="usuario" placeholder="Ingresar Usuario">
                                         </div>
                                         <div class="form-group">
-                                            <strong class="text-white"><i class="fas fa-key"></i> Contraseña</strong>
-                                            <input id="clave" class="form-control" type="password" name="clave" placeholder="Contraseña">
+                                            <h3 class="text-white"><i class="fas fa-key"></i> Contraseña</h3>
+                                            <input id="clave" class="form-control" type="password" name="clave" placeholder="Ingresar Contraseña">
                                         </div>
-                                        <button class="btn btn-primary btn-block" type="submit">Ingresar <i class="fas fa-sign-in-alt fa-lg"></i></button>
+                                        <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-sign-in-alt fa-lg"></i>&nbsp;&nbsp;&nbsp;Ingresar</button>
                                     </form>
                                 </div>
                             </div>
