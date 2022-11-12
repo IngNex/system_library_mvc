@@ -59,6 +59,17 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.bg{
+  background-image: url('../img/inventario_mdm.png');
+  /*background-size: cover;
+  background-attachment: fixed;*/
+  /*centrar una imagen predeterminada*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }

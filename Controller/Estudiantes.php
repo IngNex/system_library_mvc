@@ -75,16 +75,20 @@ class Estudiantes extends Controllers
         $pdf->AddPage();
         $pdf->SetMargins(10, 10, 10);
         $pdf->SetTitle("Personas | MDM");
-        $pdf->SetFont('Arial', 'B', 16);
+        $pdf->SetFont('Arial', 'B', 25);
+        $pdf->SetTextColor(194, 194, 194);
         $pdf->Cell(195, 15, utf8_decode('Biblioteca - Municipalidad de Mala'), 0, 1, 'C');
-        $pdf->SetFont('Arial', 'B', 14);
+        $pdf->Ln(10);
+        /* Titulo de pdf */
+        $pdf->SetFont('Arial', 'B', 20);
+        $pdf->SetTextColor(0, 0, 0);
         $pdf->Cell(195, 10, utf8_decode('Lista de Personas'), 0, 1, 'C');
-        $pdf->image(base_url() . "/Assets/img/logo.png", 180, 15, 20, 20, 'PNG');
-        $pdf->Ln(5);
+        $pdf->image(base_url() . "/Assets/img/logo.png", 180, 30, 22, 22, 'PNG');
+        $pdf->Ln(10);
         $pdf->SetMargins(10, 10, 10);
         /*$pdf->SetTitle("libros");*/
         $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(0, 0, 0);
+        $pdf->SetFillColor(84, 159, 12);
         $pdf->SetTextColor(255, 255, 255);
         $pdf->Cell(195, 10, "Registro de Personas", 1, 1, 'C', 1);
         $pdf->SetTextColor(0, 0, 0);

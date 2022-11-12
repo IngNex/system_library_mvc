@@ -61,11 +61,24 @@
         $pdf->AddPage();
         $pdf->SetMargins(10, 10, 10);
         $pdf->SetTitle("Prestamos | MDM");
-        $pdf->SetFont('Arial', 'B', 16);
+        /* Pie de pagina */
+        $pdf->SetFont('Arial', 'B', 25);
+        $pdf->SetTextColor(194, 194, 194);
         $pdf->Cell(195, 10, utf8_decode('Biblioteca - Municipalidad de Mala'), 0, 1, 'C');
-        $pdf->SetFont('Arial', 'B', 12);
-        $pdf->Cell(195, 10, utf8_decode($datos['nombre']), 0, 1, 'C');
-        $pdf->image(base_url() . "/Assets/img/logo.png", 180, 25, 20, 20, 'PNG');
+        /* Titulo de  */
+        $pdf->SetFont('Arial', 'B', 18);
+        $pdf->SetTextColor(0, 0, 0);
+        $pdf->Cell(195, 10, "Prestamos de Libros en la Bibliteca", 0, 1, 'C');
+        $pdf->image(base_url() . "/Assets/img/logo.png", 180, 30, 22, 22, 'PNG');
+        $pdf->Ln(5);
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->Cell(20, 5, utf8_decode("Mediante: "), 0, 0, 'L');
+        $pdf->SetFont('Arial', '', 10);
+        $pdf->Cell(20, 5, utf8_decode($datos['nombre']), 0, 1, 'L');
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->Cell(20, 5, "Correo: ", 0, 0, 'L');
+        $pdf->SetFont('Arial', '', 10);
+        $pdf->Cell(20, 5, utf8_decode($datos['correo']), 0, 1, 'L');
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->Cell(20, 5, utf8_decode("Teléfono: "), 0, 0, 'L');
         $pdf->SetFont('Arial', '', 10);
@@ -74,17 +87,14 @@
         $pdf->Cell(20, 5, utf8_decode("Dirección: "), 0, 0, 'L');
         $pdf->SetFont('Arial', '', 10);
         $pdf->Cell(20, 5, utf8_decode($datos['direccion']), 0, 1, 'L');
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->Cell(20, 5, "Correo: ", 0, 0, 'L');
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(20, 5, utf8_decode($datos['correo']), 0, 1, 'L');
-        $pdf->Ln();
+        $pdf->Ln(5);
 
         /* ================= TABLA ==================== */
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(0, 0, 0);
+        $pdf->SetFont('Arial', 'B', 12);
+        $pdf->SetFillColor(84, 159, 12);
         $pdf->SetTextColor(255, 255, 255);
         $pdf->Cell(195, 8, "Detalle de Prestamos", 1, 1, 'C', 1);
+        $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetTextColor(0, 0, 0);
         $pdf->Cell(10, 6, utf8_decode('N°'), 1, 0, 'L');
         $pdf->Cell(80, 6, utf8_decode('Estudiantes'), 1, 0, 'L');

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/styles.css" id="theme-stylesheet">
 </head>
 
-<body class="bg-primary">
+<body class="bg">
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
             <?php if (isset($_GET['msg'])) { ?>
