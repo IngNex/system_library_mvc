@@ -39,53 +39,75 @@
                 <div class="sb-sidenav-menu">
                     <ul class="nav" >
                         <?php if ($_SESSION['rol'] == 1) { ?>
-                            <a class="nav-link active" href="<?php echo base_url(); ?>admin/listar">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tasks fa-lg"></i></div>
-                                Prestamo
-                            </a>
+                            <h4>
+                                <a class="nav-link active" href="<?php echo base_url(); ?>admin/listar">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tasks fa-lg"></i></div>Prestamo
+                                </a>
+                            </h4>
                         <?php } ?>
+                        <h4>
                         <a class="nav-link collapsed active" href="<?php echo base_url(); ?>/libros" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-university fa-lg"></i></div>
                             Libros
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down fa-lg"></i></div>
                         </a>
+                        </h4>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
+                                <h5>
                                 <a class="nav-link active" href="<?php echo base_url(); ?>libros">
                                     <div class="sb-nav-link-icon"><i class="fas fa-book fa-lg"></i></div>
-                                    <h1>Libro</h1>
+                                    Libro
                                 </a>
+                                </h5>
+                                <h5>
                                 <a class="nav-link active" href="<?php echo base_url(); ?>autor">
                                     <div class="sb-nav-link-icon"><i class="fas fa-user-edit fa-lg"></i></div>
                                     Autor
                                 </a>
+                                </h5>
+                                <h5>
                                 <a class="nav-link active" href="<?php echo base_url(); ?>editorial">
                                     <div class="sb-nav-link-icon"><i class="fas fa-marker fa-lg"></i></div>
                                     Editorial
                                 </a>
+                                </h5>
                             </nav>
                         </div>
+                        <h4>
                         <a class="nav-link active" href="<?php echo base_url(); ?>materia">
                             <div class="sb-nav-link-icon"><i class="fas fa-chalkboard fa-lg"></i>
                             </div>
                             Materias
-                        </a><a class="nav-link active" href="<?php echo base_url(); ?>estudiantes">
+                        </a>
+                        </h4>
+                        <h4>
+                        <a class="nav-link active" href="<?php echo base_url(); ?>estudiantes">
                             <div class="sb-nav-link-icon"><i class="fas fa-user-graduate fa-lg"></i>
                             </div>
                             Personas
                         </a>
+                        </h4>
                         <?php if ($_SESSION['rol'] == 1) { ?>
+                            <h4>
                             <a class="nav-link collapsed active" href="<?php echo base_url(); ?>/usuarios" data-toggle="collapse" data-target="#collapseUser" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-user fa-lg"></i></div>
                             Usuarios
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down fa-lg"></i></div>
                             </a>
+                            </h4>
                             <div class="collapse" id="collapseUser" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
+                                    <h5>
                                     <a class="nav-link active" href="<?php echo base_url(); ?>usuarios/listar"><div class="sb-nav-link-icon"><i class="fas fa-user fa-lg"></i>
-                                </div>Usuario</a>
+                                    </div>Usuario
+                                    </a>
+                                    </h5>
+                                    <h4>
                                     <a class="nav-link active" href="<?php echo base_url(); ?>configuracion/listar"><div class="sb-nav-link-icon"><i class="fas fa-tools fa-lg"></i>
-                                </div>Configuración</a>
+                                    </div>Biblioteca
+                                    </a>
+                                    </h4>
                                 </nav>
                             </div>
                             <!--<a class="nav-link active" href="<?php echo base_url(); ?>usuarios/listar">
@@ -99,26 +121,33 @@
                                 Configuración
                             </a>-->
                         <?php } ?>
-                        <a class="nav-link collapsed active" href="<?php echo base_url(); ?>/libros" data-toggle="collapse" data-target="#collapseEst" aria-expanded="false" aria-controls="collapseLayouts">
-                            <div class="sb-nav-link-icon"><i class="fas fa-file-pdf fa-lg"></i></div>
-                            Reportes
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down fa-lg"></i></div>
-                        </a>
+                        <h4>
+                            <a class="nav-link collapsed active" href="<?php echo base_url(); ?>/libros" data-toggle="collapse" data-target="#collapseEst" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-file-pdf fa-lg"></i></div>
+                                Reportes
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down fa-lg"></i></div>
+                            </a>
+                        </h4>
                         <div class="collapse" id="collapseEst" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
+                                <h5>
                                 <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>estudiantes/pdf">
                                     <div class="sb-nav-link-icon"><i class="fas fa-address-book fa-lg"></i></div>
                                     Personas
                                 </a>
+                                </h5>
+                                <h5>
                                 <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>libros/pdf">
                                     <div class="sb-nav-link-icon"><i class="fas fa-file-invoice fa-lg"></i></div>
                                     Libros
                                 </a>
+                                </h5>
+                                <h5>
                                 <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>admin/pdf">
                                     <div class="sb-nav-link-icon"><i class="fas fa-file-download fa-lg"></i></div>
                                     Prestamos
                                 </a>
-                                
+                                </h5>
                             </nav>
                         </div>
                     </ul>
