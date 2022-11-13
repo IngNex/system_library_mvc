@@ -35,9 +35,9 @@
     </nav>
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
-            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            <nav class="sb-sidenav accordion" id="sidenavAccordion"><!--<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">-->
                 <div class="sb-sidenav-menu">
-                    <div class="nav">
+                    <ul class="nav" >
                         <?php if ($_SESSION['rol'] == 1) { ?>
                             <a class="nav-link active" href="<?php echo base_url(); ?>admin/listar">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tasks fa-lg"></i></div>
@@ -53,7 +53,7 @@
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link active" href="<?php echo base_url(); ?>libros">
                                     <div class="sb-nav-link-icon"><i class="fas fa-book fa-lg"></i></div>
-                                    Libro
+                                    <h1>Libro</h1>
                                 </a>
                                 <a class="nav-link active" href="<?php echo base_url(); ?>autor">
                                     <div class="sb-nav-link-icon"><i class="fas fa-user-edit fa-lg"></i></div>
@@ -121,7 +121,7 @@
                                 
                             </nav>
                         </div>
-                    </div>
+                    </ul>
                 </div>
                 <div class="sb-sidenav-footer bg-primary text-center">
                         <img src="<?php echo base_url(); ?>Assets/img/muni.png" alt="mdm" width="100"/>

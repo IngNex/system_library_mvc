@@ -175,12 +175,12 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #ffffff;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #0056b3;
+  color: #000;
   text-decoration: underline;
 }
 
@@ -3924,40 +3924,48 @@ input[type=button].btn-block {
   display: block;
   padding: 0.5rem 1rem;
 }
-.nav-link:hover, .nav-link:focus {
+
+.nav-link:hover,
+.nav-link:focus {
   text-decoration: none;
 }
+
 .nav-link.disabled {
   color: #6c757d;
-  pointer-events: none;
-  cursor: default;
 }
 
 .nav-tabs {
   border-bottom: 1px solid #dee2e6;
 }
+
 .nav-tabs .nav-item {
   margin-bottom: -1px;
 }
+
 .nav-tabs .nav-link {
   border: 1px solid transparent;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
-.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
   border-color: #e9ecef #e9ecef #dee2e6;
 }
+
 .nav-tabs .nav-link.disabled {
   color: #6c757d;
   background-color: transparent;
   border-color: transparent;
 }
+
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff;
+  background-color: #fafafa;
+  border-color: #dee2e6 #dee2e6 #fafafa;
 }
+
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
   border-top-left-radius: 0;
@@ -3967,10 +3975,11 @@ input[type=button].btn-block {
 .nav-pills .nav-link {
   border-radius: 0.25rem;
 }
+
 .nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #007bff;
+.nav-pills .show>.nav-link {
+  color: #ffffff;
+  background-color: #2196f3;
 }
 
 .nav-fill .nav-item {
@@ -4072,6 +4081,7 @@ input[type=button].btn-block {
   background: no-repeat center center;
   background-size: 100% 100%;
 }
+
 
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
@@ -10178,7 +10188,28 @@ body {
   flex-direction: column;
   height: 100%;
   flex-wrap: nowrap;
+
+  background-image: url('../../Assets/img/sidebar.jpg');
+  /*background-size: cover;
+  background-attachment: fixed;*/
+  /*centrar una imagen predeterminada*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
 }
+
+/*el Scrollbar del navegador*/
+.sb-sidenav ::-webkit-scrollbar {
+  width: 10px;
+  background: #64AF2E;
+}
+.sb-sidenav ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, rgba(0,212,255,1) 0%, rgba(15,124,222,1) 35%, rgba(15,15,222,1) 100%);
+  border-radius: 10px;
+}
+
+
 .sb-sidenav .sb-sidenav-menu {
   flex-grow: 1;
 }
@@ -10285,3 +10316,14 @@ body {
 .sb-sidenav-light .sb-sidenav-footer {
   background-color: #e9ecef;
 }
+
+/*el Scrollbar del navegador*/
+body::-webkit-scrollbar {
+  width: 10px;
+  background: #64AF2E;
+}
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, rgba(0,212,255,1) 0%, rgba(15,124,222,1) 35%, rgba(15,15,222,1) 100%);
+  border-radius: 10px;
+}
+
