@@ -178,11 +178,12 @@ a {
   color: #fff;
   text-decoration: none;
   background-color: transparent;
+  transition: all .3s;
 }
 a:hover {
-  color: #00F701;
+  color: #00d4ff;
   text-decoration: underline;
-  transition: .3s;
+  transition: all .3s;
 }
 
 a:not([href]) {

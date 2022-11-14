@@ -57,7 +57,7 @@
                 </div>
             </main>
         </div>
-        <div id="layoutAuthentication_footer">
+        <!--<div id="layoutAuthentication_footer">
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
                     <div class="d-flex align-items-center justify-content-between small">
@@ -65,7 +65,7 @@
                     </div>
                 </div>
             </footer>
-        </div>
+        </div>-->
     </div>
     <script src="<?php echo base_url(); ?>Assets/js/all.min.js"></script>
     <script src="<?php echo base_url(); ?>Assets/js/jquery.min.js"></script>
