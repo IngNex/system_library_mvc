@@ -17,7 +17,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            <!--<?php foreach ($data as $materia) {
+                                <?php foreach ($data as $materia) {
                                     if ($materia['estado'] == 1) {
                                         $estado = '<span class="badge-success p-1 rounded">Activo</span>';
                                     } else {
@@ -45,7 +45,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                <?php } ?>-->
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>

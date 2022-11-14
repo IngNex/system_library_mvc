@@ -40,7 +40,7 @@
                     <div class="nav">
                     <!--Item Home-->
                         <h4>
-                            <a class="nav-link active" href="<?php echo base_url(); ?>#">
+                            <a class="nav-link active" href="<?php echo base_url(); ?>homepage/listar">
                                 <div class="sb-nav-link-icon"><i class="fas fa-home fa-lg"></i>
                                 </div>
                                 Home
