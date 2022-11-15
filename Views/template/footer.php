@@ -12,6 +12,7 @@
 <script src="<?php echo base_url(); ?>Assets/js/select2.min.js"></script>
 <script src="<?php echo base_url(); ?>Assets/js/scripts.js"></script>
 <script src="<?php echo base_url(); ?>Assets/js/Funciones.js"></script>
+<script src="<?php echo base_url(); ?>Assets/js/chart.min.js"></script>
 <script src="<?php echo base_url(); ?>Assets/js/all.min.js"></script>
 <script src="<?php echo base_url(); ?>Assets/js/sweetalert2@9.js"></script>
 <script src="<?php echo base_url(); ?>Assets/js/jquery.dataTables.min.js"></script>

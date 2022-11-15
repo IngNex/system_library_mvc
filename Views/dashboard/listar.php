@@ -1,3 +1,6 @@
+<head>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/material/material-dashboard.css" rel="stylesheet" />
+</head>
 <?php encabezado() ?>
 <div id="layoutSidenav_content">
     <main>
@@ -26,7 +29,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="card card-stats">
                                 <div class="card-header card-header-success card-header-icon">
@@ -86,12 +88,33 @@
                                 <div class="card-footer bg-danger text-white">
                                 </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
         <div class="container-fluid">
             <div class="row">
+            <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header card-header-primary">
+                                    <h3 class="title-2 m-b-40">Materiales con stock mínimo</h3>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="stockMinimo"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header card-header-primary">
+                                    <h3 class="title-2 m-b-40">Materiales más remitidos</h3>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="ProductosVendidos"></canvas>
+                                </div>
+                            </div>
+                        </div>
                 <div class="col-lg-12">
                     <h2 class="text-center">Materias de Libros</h2>
                     <button class="btn btn-primary mb-2" type="button" data-toggle="modal" data-target="#nuevoMateria"><i class="fas fa-folder-plus"></i>&nbsp;&nbsp;Nueva Materia</button>
