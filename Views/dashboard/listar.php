@@ -4,6 +4,95 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
+                    <h2 class="text-center">Dashboard</h2>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header card-header-warning card-header-icon">
+                                    <div class="card-icon">
+                                        <i class="fas fa-user-circle fa-2x"></i>
+                                    </div>
+                                    <a href="usuarios.php" class="card-category text-warning font-weight-bold">
+                                        Miembros
+                                    </a>
+                                    <h3 class="card-title">
+                                        <?php 
+                                        foreach ($data['usuarios'] as $user) {
+                                        echo $user['usuarios'];
+                                        } ?>
+                                    </h3>
+                                </div>
+                                <div class="card-footer bg-warning text-white">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header card-header-success card-header-icon">
+                                    <div class="card-icon">
+                                        <i class="fas fa-users fa-2x"></i>
+                                    </div>
+                                    <a href="clientes.php" class="card-category text-success font-weight-bold">
+                                        Personas
+                                    </a>
+                                    <h3 class="card-title">
+                                        <?php 
+                                        foreach ($data['personas'] as $pers) {
+                                        echo $pers['personas'];
+                                        } ?>
+                                    </h3>
+                                </div>
+                                <div class="card-footer bg-secondary text-white">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header card-header-danger card-header-icon">
+                                    <div class="card-icon">
+                                        <i class="fas fa-book fa-2x"></i>
+                                    </div>
+                                    <a href="productos.php" class="card-category text-danger font-weight-bold">
+                                        Libros
+                                    </a>
+                                    <h3 class="card-title">
+                                        <?php 
+                                        foreach ($data['libros'] as $libro) {
+                                        echo $libro['libros'];
+                                        } ?>
+                                    </h3>
+                                </div>
+                                <div class="card-footer bg-primary">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header card-header-info card-header-icon">
+                                    <div class="card-icon">
+                                        <i class="fas fa fa-tasks fa-2x"></i>
+                                    </div>
+                                    <a href="ventas.php" class="card-category text-info font-weight-bold">
+                                        Pretamos
+                                    </a>
+                                    <h3 class="card-title">
+                                        <?php 
+                                        foreach ($data['prestamos'] as $pres) {
+                                        echo $pres['prestamos'];
+                                        } ?>
+                                    </h3>
+                                </div>
+                                <div class="card-footer bg-danger text-white">
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
                     <h2 class="text-center">Materias de Libros</h2>
                     <button class="btn btn-primary mb-2" type="button" data-toggle="modal" data-target="#nuevoMateria"><i class="fas fa-folder-plus"></i>&nbsp;&nbsp;Nueva Materia</button>
                     <div class="table-responsive">
@@ -17,6 +106,7 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <!--
                                 <?php foreach ($data as $materia) {
                                     if ($materia['estado'] == 1) {
                                         $estado = '<span class="badge-success p-1 rounded">Activo</span>';
@@ -46,6 +136,7 @@
                                         </td>
                                     </tr>
                                 <?php } ?>
+                                -->
                             </tbody>
                         </table>
                     </div>

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/styles.css" id="theme-stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/select2.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/dataTables.bootstrap4.min.css">
-
+    
 </head>
 
 <body class="sb-nav-fixed">
@@ -40,7 +40,7 @@
                     <div class="nav">
                     <!--Item Home-->
                         <h4>
-                            <a class="nav-link active" href="<?php echo base_url(); ?>#"><!--homepage/listar-->
+                            <a class="nav-link active" href="<?php echo base_url(); ?>dashboard"><!--homepage/listar-->
                                 <div class="sb-nav-link-icon"><i class="fas fa-home fa-lg"></i>
                                 </div>
                                 Home

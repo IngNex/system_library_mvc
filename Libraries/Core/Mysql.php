@@ -50,5 +50,10 @@ class Mysql extends Conexion{
         $result->execute();
         return $result;
     }
+    /*public function count(string $query){
+        $this->strquery = $query;
+        $result = $this->conexion->prepare($this->strquery);
+        $
+    }*/
 }
 ?>
