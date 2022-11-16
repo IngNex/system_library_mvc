@@ -73,8 +73,8 @@ if (document.getElementById("stockMinimo")) {
                 var nombre = [];
                 var cantidad = [];
                 for (var i = 0; i < data.length; i++) {
-                    nombre.push(data[i]['nombre']);
-                    cantidad.push(data[i]['id']);
+                    nombre.push(data[i]['titulo']);
+                    cantidad.push(data[i]['cantidad']);
                 }
                 var ctx = document.getElementById("stockMinimo");
                 var myPieChart = new Chart(ctx, {
@@ -83,7 +83,7 @@ if (document.getElementById("stockMinimo")) {
                         labels: nombre,
                         datasets: [{
                             data: cantidad,
-                            backgroundColor: ['#024A86', '#E7D40A', '#581845', '#C82A54', '#EF280F', '#8C4966', '#FF689D', '#E36B2C', '#69C36D', '#23BAC4'],
+                            backgroundColor: ['#053cf0', '#ffff00', '#d90098',  '#ff1c00', '#5e022a', '#ff005a', '#ff5800', '#52e358', '#02fafa','#fa3232'],
                         }],
                     },
                 });
@@ -97,7 +97,7 @@ if (document.getElementById("stockMinimo")) {
 if (document.getElementById("ProductosVendidos")) {
     const action = "polarChart";
     $.ajax({
-        url: 'chart.php',
+        url: 'src/chart.php',
         type: 'POST',
         async: true,
         data: {
@@ -109,7 +109,7 @@ if (document.getElementById("ProductosVendidos")) {
                 var nombre = [];
                 var cantidad = [];
                 for (var i = 0; i < data.length; i++) {
-                    nombre.push(data[i]['descripcion']);
+                    nombre.push(data[i]['titulo']);
                     cantidad.push(data[i]['cantidad']);
                 }
                 var ctx = document.getElementById("ProductosVendidos");
@@ -119,7 +119,7 @@ if (document.getElementById("ProductosVendidos")) {
                         labels: nombre,
                         datasets: [{
                             data: cantidad,
-                            backgroundColor: ['#C82A54', '#EF280F', '#23BAC4', '#8C4966', '#FF689D', '#E7D40A', '#E36B2C', '#69C36D', '#581845', '#024A86'],
+                            backgroundColor: ['#ff7300', '#F00100', '#02e8f7', '#f0d662', '#48d4a0', '#e3c30b', '#E36B2C', '#02ab09', '#540202', '#073ceb'],
                         }],
                     },
                 });
