@@ -21,5 +21,15 @@ if ($_POST['action'] == 'polarChart') {
     echo json_encode($arreglo);
     die();
 }
+if ($_POST['action'] == 'personasChart') {
+    $arreglo = array();
+    $query = mysqli_query($conexion, "SELECT carrera , count(*) AS cantidad FROM estudiante GROUP BY carrera;");
+    
+    while ($data = mysqli_fetch_array($query)) {
+        $arreglo[] = $data;
+    }
+    echo json_encode($arreglo);
+    die();
+}
 //
 ?>

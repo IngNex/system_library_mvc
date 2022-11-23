@@ -131,3 +131,40 @@ if (document.getElementById("ProductosVendidos")) {
         }
     });
 }
+if (document.getElementById("dataPersonas")) {
+    const action = "personasChart";
+    $.ajax({
+        url: 'src/chart.php',
+        type: 'POST',
+        async: true,
+        data: {
+            action
+        },
+        success: function (response) {
+            if (response != 0) {
+                var data = JSON.parse(response);
+                var nombre = [];
+                var cantidad = [];
+                for (var i = 0; i < data.length; i++) {
+                    nombre.push(data[i]['carrera']);
+                    cantidad.push(data[i]['cantidad']);
+                }
+                var ctx = document.getElementById("dataPersonas");
+                var myPieChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: nombre,
+                        datasets: [{
+                            data: cantidad,
+                            backgroundColor: [ '#073ceb','#ff7300', '#F00100', '#02ab09', '#540202', '#073ceb','#ff7300', '#F00100','#E36B2C', '#02e8f7', '#f0d662', '#48d4a0', '#e3c30b'],
+                        }],
+                    },
+                });
+            }
+        },
+        error: function (error) {
+            console.log(error);
+
+        }
+    });
+}
