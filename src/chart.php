@@ -31,5 +31,28 @@ if ($_POST['action'] == 'personasChart') {
     echo json_encode($arreglo);
     die();
 }
+
+// Desfasado
+if ($_POST['action'] == 'usersChart') {
+    $arreglo = array();
+    $query = mysqli_query($conexion, "SELECT rol , count(*) AS cantidad FROM usuarios GROUP BY rol;");
+    
+    while ($data = mysqli_fetch_array($query)) {
+        $arreglo[] = $data;
+    }
+    echo json_encode($arreglo);
+    die();
+}
+
+if ($_POST['action'] == 'materialChart') {
+    $arreglo = array();
+    $query = mysqli_query($conexion, "SELECT estado , count(*) AS cantidad FROM materia GROUP BY estado;");
+    
+    while ($data = mysqli_fetch_array($query)) {
+        $arreglo[] = $data;
+    }
+    echo json_encode($arreglo);
+    die();
+}
 //
 ?>
