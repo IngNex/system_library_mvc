@@ -22,30 +22,6 @@
             <div class="row">
                 <div class="col-lg-12 mt-2">
                 <h2 class="text-center">Usuarios de Biblioteca</h2>
-                <br>
-    <main>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <center>
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-header card-header-primary">
-                                    <center>
-                                        <h3 class="title-2 m-b-40">Estado de material</h3>
-                                    </center>
-                                </div>
-                                <div class="card-body">
-                                    <canvas id="dataUser"></canvas>
-                                </div>
-                            </div>
-                        </div>       
-                    </center> 
-                </div>
-            </div>
-        </div>
-    </main>
-    <br>
                     <div class="row">
                         <div class="col-lg-6 mb-2">
                             <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#nuevo_user"><i class="fas fa-id-badge fa-lg"></i>&nbsp;Nuevo Usuario</button>

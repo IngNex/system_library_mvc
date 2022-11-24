@@ -132,18 +132,24 @@
             $pdf->Cell(195, 10, "Libros de la Biblioteca", 1, 1, 'C', 1);
             $pdf->SetTextColor(0, 0, 0);
             $pdf->Cell(10, 6, utf8_decode('N°'), 1, 0, 'C');
-            $pdf->Cell(60, 6, utf8_decode('Titulo'), 1, 0, 'L');
-            $pdf->Cell(70, 6, utf8_decode('Autor'), 1, 0, 'L');
-            $pdf->Cell(40, 6, utf8_decode('Editorial'), 1, 0, 'L');
-            $pdf->Cell(15, 6, 'Cant.', 1, 1, 'C');
+            $pdf->Cell(65, 6, utf8_decode('Titulo'), 1, 0, 'L');
+            $pdf->Cell(20, 6, utf8_decode('Imagen'), 1, 0, 'L');
+            $pdf->Cell(60, 6, utf8_decode('Autor'), 1, 0, 'L');
+            $pdf->Cell(30, 6, utf8_decode('Editorial'), 1, 0, 'L');
+            $pdf->Cell(10, 6, 'Cant.', 1, 1, 'C');
             $pdf->SetFont('Arial', '', 10);
             $contador = 1;
             foreach ($libros as $row) {
-                $pdf->Cell(10, 6, $contador, 1, 0, 'C');
-                $pdf->Cell(60, 6, utf8_decode($row['titulo']), 1, 0, 'L');
-                $pdf->Cell(70, 6, utf8_decode($row['autor']), 1, 0, 'L');
-                $pdf->Cell(40, 6, utf8_decode($row['editorial']), 1, 0, 'L');
-                $pdf->Cell(15, 6, $row['cantidad'], 1, 1, 'C');
+                $pdf->Cell(10, 22, $contador, 1, 0, 'C');
+                $pdf->Cell(65, 22, utf8_decode($row['titulo']), 1, 0, 'L');
+                $pdf->Cell(20,22, $pdf->Image(base_url() . 'Assets/images/libros/'.$row['imagen'], $pdf->GetX()+5, $pdf->GetY()+2, 12), 1,0,'C');
+                $pdf->Cell(60, 22, utf8_decode($row['autor']), 1, 0, 'L');
+                $pdf->Cell(30, 22, utf8_decode($row['editorial']), 1, 0, 'L');
+                $pdf->Cell(10, 22, $row['cantidad'], 1, 1, 'C');
+                /*$pdf->Image(base_url() . "Assets/images/autor/".$row['imagen'], 180, 30, 22, 22, 'JPG');
+                /*$pdf->image(base_url()."Assets/images/autor/".$row['imagen'], 'JPG');
+                $pdf->Cell(100,5, $pdf->Image('../galerias/'.$row['portada'], $pdf->GetX()+40, $pdf->GetY()+3, 30), 1,0,'C');
+                */
                 $contador++;
             }
             $pdf->Output("libros.pdf", "I");

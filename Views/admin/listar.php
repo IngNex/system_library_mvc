@@ -1,5 +1,7 @@
 <?php encabezado() ?>
-
+<?php
+include("./conexion.php");
+?>
 <div id="layoutSidenav_content">
     <?php if (isset($_GET['no_s'])) { ?>
         <div class="toast ml-auto mr-1 bg-danger text-white" id="alerta" role="alert" data-delay="3000" aria-live="assertive" aria-atomic="true">
