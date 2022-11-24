@@ -92,4 +92,28 @@
             </div>
         </div>
     </main>
+    <br>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <center>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header card-header-primary">
+                                    <center>
+                                        <h3 class="title-2 m-b-40">Estado de Autores</h3>
+                                    </center>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="autorEstado"></canvas>
+                                </div>
+                            </div>
+                        </div>       
+                    </center> 
+                </div>
+            </div>
+        </div>
+    </main>
+    <br>
     <?php pie() ?>

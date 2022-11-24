@@ -229,10 +229,10 @@ if (document.getElementById("materialEstado")) {
                 var myPieChart = new Chart(ctx, {
                     type: 'bar',
                     data: { 
-                        labels: ['desacivo', 'activo'],
+                        labels: ['Inactivo', 'Activo'],
                         datasets: [{
                             data: cantidad,
-                            backgroundColor: ['#053cf0', '#ffff00', '#d90098',  '#ff1c00', '#5e022a', '#ff005a', '#ff5800', '#52e358', '#02fafa','#fa3232'],
+                            backgroundColor: ['#DC3545', '#28A745', '#d90098',  '#ff1c00', '#5e022a', '#ff005a', '#ff5800', '#52e358', '#02fafa','#fa3232'],
                         }],
                     },
                 });
@@ -281,4 +281,43 @@ if (document.getElementById("libroCantidad")) {
         }
     });
 }
+
+if (document.getElementById("autorEstado")) {
+    const action = "autorChart";
+    $.ajax({
+        url: 'src/chart.php',
+        type: 'POST',
+        data: {
+            action
+        },
+        async: true,
+        success: function (response) {
+            if (response != 0) {
+                var data = JSON.parse(response);
+                var nombre = [];
+                var cantidad = [];
+                for (var i = 0; i < data.length; i++) {
+                    nombre.push(data[i]['estado']);
+                    cantidad.push(data[i]['cantidad']);
+                }
+                var ctx = document.getElementById("autorEstado");
+
+                var myPieChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: { 
+                        labels: ['Inactivo', 'Activo'],
+                        datasets: [{
+                            data: cantidad,
+                            backgroundColor: ['#DC3545', '#28A745', '#d90098',  '#ff1c00', '#5e022a', '#ff005a', '#ff5800', '#52e358', '#02fafa','#fa3232'],
+                        }],
+                    },
+                });
+            }
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
+
 
