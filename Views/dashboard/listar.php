@@ -15,9 +15,9 @@
                             <div class="card card-stats">
                                 <div class="card-header card-header-warning card-header-icon">
                                     <div class="card-icon">
-                                        <i class="fas fa-user-circle fa-2x"></i>
+                                        <a href="<?php echo base_url(); ?>usuarios/listar"><i class="fas fa-user-circle fa-2x"></i></a>
                                     </div>
-                                    <a href="usuarios.php" class="card-category text-warning font-weight-bold">
+                                    <a href="<?php echo base_url(); ?>usuarios/listar" class="card-category text-warning font-weight-bold">
                                         Miembros
                                     </a>
                                     <h3 class="card-title">
@@ -35,9 +35,9 @@
                             <div class="card card-stats">
                                 <div class="card-header card-header-info card-header-icon">
                                     <div class="card-icon">
-                                        <i class="fas fa-users fa-2x"></i>
+                                    <a href="<?php echo base_url(); ?>estudiantes"><i class="fas fa-users fa-2x"></i></a>
                                     </div>
-                                    <a href="clientes.php" class="card-category text-info font-weight-bold">
+                                    <a href="<?php echo base_url(); ?>estudiantes" class="card-category text-info font-weight-bold">
                                         Personas
                                     </a>
                                     <h3 class="card-title">
@@ -55,9 +55,9 @@
                             <div class="card card-stats">
                                 <div class="card-header card-header-success card-header-icon">
                                     <div class="card-icon">
-                                        <i class="fas fa-book fa-2x"></i>
+                                    <a href="<?php echo base_url(); ?>libros"><i class="fas fa-book fa-2x"></i></a>
                                     </div>
-                                    <a href="productos.php" class="card-category text-success font-weight-bold">
+                                    <a href="<?php echo base_url(); ?>libros" class="card-category text-success font-weight-bold">
                                         Libros
                                     </a>
                                     <h3 class="card-title">
@@ -77,7 +77,7 @@
                                     <div class="card-icon">
                                         <i class="fas fa fa-tasks fa-2x"></i>
                                     </div>
-                                    <a href="ventas.php" class="card-category text-danger font-weight-bold">
+                                    <a href="<?php echo base_url(); ?>admin/listar" class="card-category text-danger font-weight-bold">
                                         Prestamos
                                     </a>
                                     <h3 class="card-title">
