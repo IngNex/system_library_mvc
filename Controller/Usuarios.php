@@ -79,7 +79,8 @@ class Usuarios extends Controllers
                     $_SESSION['correo'] = $data['correo'];
                     $_SESSION['rol'] = $data['rol'];
                     $_SESSION['activo'] = true;
-                    header('location: '.base_url(). 'admin/listar');
+                    header('location: '.base_url(). 'dashboard');
+                    /*header('location: '.base_url(). 'admin/listar');*/
             } else {
                 $error = 0;
                 header("location: ".base_url()."?msg=$error");

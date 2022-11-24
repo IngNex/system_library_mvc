@@ -4,7 +4,8 @@
         {
         session_start();
         if (!empty($_SESSION['activo'])) {
-            header("location: " . base_url()."Admin/Listar");
+            header("location: " . base_url()."dashboard");
+            /*header("location: " . base_url()."Admin/Listar");*/
         }
             parent::__construct();
         }

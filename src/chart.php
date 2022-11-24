@@ -33,7 +33,7 @@ if ($_POST['action'] == 'personasChart') {
 }
 
 // Desfasado
-if ($_POST['action'] == 'usersChart') {
+if ($_POST['action'] == 'usuarioChart') {
     $arreglo = array();
     $query = mysqli_query($conexion, "SELECT rol , count(*) AS cantidad FROM usuarios GROUP BY rol;");
     

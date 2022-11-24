@@ -169,32 +169,32 @@ if (document.getElementById("dataPersonas")) {
     });
 }
 
-if (document.getElementById("rolUsuarios")) {
-    const action = "usersChart";
+if (document.getElementById("dataUser")) {
+    const action = "usuarioChart";
     $.ajax({
         url: 'src/chart.php',
         type: 'POST',
+        async: true,
         data: {
             action
         },
-        async: true,
         success: function (response) {
             if (response != 0) {
                 var data = JSON.parse(response);
                 var nombre = [];
                 var cantidad = [];
                 for (var i = 0; i < data.length; i++) {
-                    nombre.push(data[i]['titulo']);
+                    nombre.push(data[i]['rol']);
                     cantidad.push(data[i]['cantidad']);
                 }
-                var ctx = document.getElementById("rolUsuarios");
+                var ctx = document.getElementById("dataUser");
                 var myPieChart = new Chart(ctx, {
-                    type: 'pie',
+                    type: 'doughnut',
                     data: {
                         labels: nombre,
                         datasets: [{
                             data: cantidad,
-                            backgroundColor: ['#053cf0', '#ffff00', '#d90098',  '#ff1c00', '#5e022a', '#ff005a', '#ff5800', '#52e358', '#02fafa','#fa3232'],
+                            backgroundColor: [ '#073ceb','#ff7300', '#F00100', '#02ab09', '#540202', '#073ceb','#ff7300', '#F00100','#E36B2C', '#02e8f7', '#f0d662', '#48d4a0', '#e3c30b'],
                         }],
                     },
                 });
@@ -202,6 +202,7 @@ if (document.getElementById("rolUsuarios")) {
         },
         error: function (error) {
             console.log(error);
+
         }
     });
 }
