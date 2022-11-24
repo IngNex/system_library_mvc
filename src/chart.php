@@ -54,5 +54,18 @@ if ($_POST['action'] == 'materialChart') {
     echo json_encode($arreglo);
     die();
 }
+
+if ($_POST['action'] == 'libroChart') {
+    $arreglo = array();
+    $query = mysqli_query($conexion, "SELECT titulo, cantidad FROM libro;");
+    
+    while ($data = mysqli_fetch_array($query)) {
+        $arreglo[] = $data;
+    }
+    echo json_encode($arreglo);
+    die();
+}
 //
 ?>
+
+

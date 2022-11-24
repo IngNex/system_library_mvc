@@ -93,7 +93,7 @@
                             <div class="card">
                                 <div class="card-header card-header-primary">
                                     <center>
-                                        <h3 class="title-2 m-b-40">Estado de material</h3>
+                                        <h3 class="title-2 m-b-40">Estado de Materias</h3>
                                     </center>
                                 </div>
                                 <div class="card-body">
