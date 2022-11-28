@@ -21,6 +21,8 @@ if ($_POST['action'] == 'polarChart') {
     echo json_encode($arreglo);
     die();
 }
+
+/* ========== Querys Personas  ======== */
 if ($_POST['action'] == 'personasChart') {
     $arreglo = array();
     $query = mysqli_query($conexion, "SELECT carrera , count(*) AS cantidad FROM estudiante GROUP BY carrera;");
@@ -31,6 +33,17 @@ if ($_POST['action'] == 'personasChart') {
     echo json_encode($arreglo);
     die();
 }
+if ($_POST['action'] == 'estadoPersonaChart') {
+    $arreglo = array();
+    $query = mysqli_query($conexion, "SELECT estado, count(*) AS cantidad FROM estudiante GROUP BY estado;");
+    
+    while ($data = mysqli_fetch_array($query)) {
+        $arreglo[] = $data;
+    }
+    echo json_encode($arreglo);
+    die();
+}
+/* ========== End Personas  ======== */
 
 // Desfasado
 if ($_POST['action'] == 'usuarioChart') {
