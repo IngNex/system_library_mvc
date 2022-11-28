@@ -140,21 +140,41 @@ include("./conexion.php");
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12">
-                    <center>
-                        <div class="col-lg-6">
+                <div class="col-lg-4">
                             <div class="card">
                                 <div class="card-header card-header-primary">
                                     <center>
-                                        <h3 class="title-2 m-b-40">Libros</h3>
+                                        <h3 class="title-2 m-b-40">Libros por Personas</h3>
                                     </center>
                                 </div>
                                 <div class="card-body">
-                                    <canvas id="libroCantidad"></canvas>
+                                    <canvas id="personaPrestamo"></canvas>
                                 </div>
                             </div>
-                        </div>       
-                    </center> 
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <center>
+                                <h3 class="title-2 m-b-40">Prestamos de Libro</h3>
+                            </center>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="ProductosVendidos"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <center>
+                                <h3 class="title-2 m-b-40">Estado de Prestamos</h3>
+                            </center>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="estadoPrestamo"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

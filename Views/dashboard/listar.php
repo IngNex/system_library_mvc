@@ -77,7 +77,7 @@
                                     <div class="card-icon">
                                         <i class="fas fa fa-tasks fa-2x"></i>
                                     </div>
-                                    <a href="<?php echo base_url(); ?>admin/listar" class="card-category text-danger font-weight-bold">
+                                    <a href="<?php echo base_url(); ?>admin" class="card-category text-danger font-weight-bold">
                                         Prestamos
                                     </a>
                                     <h3 class="card-title">

@@ -10,6 +10,8 @@ if ($_POST['action'] == 'sales') {
     echo json_encode($arreglo);
     die();
 }
+
+
 if ($_POST['action'] == 'polarChart') {
     $arreglo = array();
     /* SELECT * FROM prestamo as p INNER JOIN libro as l WHERE p.id=l.id; */
@@ -45,7 +47,7 @@ if ($_POST['action'] == 'estadoPersonaChart') {
 }
 /* ========== End Personas  ======== */
 
-// Desfasado
+/* ========== Querys Usuario  ======== */
 if ($_POST['action'] == 'usuarioChart') {
     $arreglo = array();
     $query = mysqli_query($conexion, "SELECT rol , count(*) AS cantidad FROM usuarios GROUP BY rol;");
@@ -57,6 +59,7 @@ if ($_POST['action'] == 'usuarioChart') {
     die();
 }
 
+/* ========== Querys Materia  ======== */
 if ($_POST['action'] == 'materialChart') {
     $arreglo = array();
     $query = mysqli_query($conexion, "SELECT estado , count(*) AS cantidad FROM materia GROUP BY estado;");
@@ -68,6 +71,7 @@ if ($_POST['action'] == 'materialChart') {
     die();
 }
 
+/* ========== Querys Libro  ======== */
 if ($_POST['action'] == 'libroChart') {
     $arreglo = array();
     $query = mysqli_query($conexion, "SELECT titulo, cantidad FROM libro;");
@@ -78,6 +82,8 @@ if ($_POST['action'] == 'libroChart') {
     echo json_encode($arreglo);
     die();
 }
+
+/* ========== Querys Autor  ======== */
 
 if ($_POST['action'] == 'autorChart') {
     $arreglo = array();
@@ -90,6 +96,7 @@ if ($_POST['action'] == 'autorChart') {
     die();
 }
 
+/* ========== Querys Editorial  ======== */
 if ($_POST['action'] == 'editorialChart') {
     $arreglo = array();
     $query = mysqli_query($conexion, "SELECT estado , count(*) AS cantidad FROM editorial GROUP BY estado;");
@@ -100,7 +107,29 @@ if ($_POST['action'] == 'editorialChart') {
     echo json_encode($arreglo);
     die();
 }
-//
+
+
+/* ========== Querys Prestamo  ======== */
+if ($_POST['action'] == 'prestamoPersona') {
+    $arreglo = array();
+    $query = mysqli_query($conexion, "SELECT e.nombre, p.cantidad FROM prestamo as p INNER JOIN estudiante as e WHERE p.id_estudiante=e.id;");
+    while ($data = mysqli_fetch_array($query)) {
+        $arreglo[] = $data;
+    }
+    echo json_encode($arreglo);
+    die();
+}
+
+
+if ($_POST['action'] == 'estadoPrestamo') {
+    $arreglo = array();
+    $query = mysqli_query($conexion, "SELECT p.estado, COUNT(*) as cantidad FROM prestamo as p INNER JOIN libro as l WHERE p.id=l.id GROUP BY estado;");
+    while ($data = mysqli_fetch_array($query)) {
+        $arreglo[] = $data;
+    }
+    echo json_encode($arreglo);
+    die();
+}
 ?>
 
 

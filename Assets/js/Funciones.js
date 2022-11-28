@@ -58,6 +58,7 @@ $(document).ready(function () {
     
 });
 
+/*==================== LIBROS EN STOCK ======================*/
 if (document.getElementById("stockMinimo")) {
     const action = "sales";
     $.ajax({
@@ -94,6 +95,8 @@ if (document.getElementById("stockMinimo")) {
         }
     });
 }
+
+/*==================== Prestamos de Libros ======================*/
 if (document.getElementById("ProductosVendidos")) {
     const action = "polarChart";
     $.ajax({
@@ -131,6 +134,8 @@ if (document.getElementById("ProductosVendidos")) {
         }
     });
 }
+
+/*==================== PERSONAS - CANTIDAD DE NIVEL DE ESTUDIO ======================*/
 if (document.getElementById("dataPersonas")) {
     const action = "personasChart";
     $.ajax({
@@ -168,6 +173,8 @@ if (document.getElementById("dataPersonas")) {
         }
     });
 }
+
+/*==================== PERSONAS ESTADO ======================*/
 if (document.getElementById("estadoPersona")) {
     const action = "estadoPersonaChart";
     $.ajax({
@@ -206,6 +213,7 @@ if (document.getElementById("estadoPersona")) {
     });
 }
 
+/*==================== ROL DE USUARIO ======================*/
 if (document.getElementById("dataUser")) {
     const action = "usuarioChart";
     $.ajax({
@@ -244,6 +252,7 @@ if (document.getElementById("dataUser")) {
     });
 }
 
+/*==================== ROL DE USUARIO ======================*/
 if (document.getElementById("materialEstado")) {
     const action = "materialChart";
     $.ajax({
@@ -282,6 +291,7 @@ if (document.getElementById("materialEstado")) {
     });
 }
 
+/*==================== CANTIDAD DE LIBRO ======================*/
 if (document.getElementById("libroCantidad")) {
     const action = "libroChart";
     $.ajax({
@@ -320,6 +330,7 @@ if (document.getElementById("libroCantidad")) {
     });
 }
 
+/*==================== ESTADO DE AUTOR ======================*/
 if (document.getElementById("autorEstado")) {
     const action = "autorChart";
     $.ajax({
@@ -358,6 +369,7 @@ if (document.getElementById("autorEstado")) {
     });
 }
 
+/*==================== ESTADO DE EDITORIAL ======================*/
 if (document.getElementById("editorialEstado")) {
     const action = "editorialChart";
     $.ajax({
@@ -385,6 +397,86 @@ if (document.getElementById("editorialEstado")) {
                         datasets: [{
                             data: cantidad,
                             backgroundColor: ['#DC3545', '#28A745', '#d90098',  '#ff1c00', '#5e022a', '#ff005a', '#ff5800', '#52e358', '#02fafa','#fa3232'],
+                        }],
+                    },
+                });
+            }
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
+
+/*==================== PRESTAMO POR PERSONA ======================*/
+if (document.getElementById("personaPrestamo")) {
+    const action = "prestamoPersona";
+    $.ajax({
+        url: 'src/chart.php',
+        type: 'POST',
+        async: true,
+        data: {
+            action
+        },
+        success: function (response) {
+            if (response != 0) {
+                var data = JSON.parse(response);
+                var nombre = [];
+                var cantidad = [];
+                for (var i = 0; i < data.length; i++) {
+                    nombre.push(data[i]['nombre']);
+                    cantidad.push(data[i]['cantidad']);
+                }
+                var ctx = document.getElementById("personaPrestamo");
+                var myPieChart = new Chart(ctx, {
+                    type: 'polarArea',
+                    data: {
+                        labels: nombre,
+                        datasets: [{
+                            data: cantidad,
+                            backgroundColor: ['#48d4a0', '#e3c30b','#02ab09', '#540202', '#073ceb','#ff7300', '#F00100', '#02e8f7', '#f0d662', '#48d4a0', '#e3c30b', '#E36B2C'],
+                        }],
+                    },
+                });
+            }
+        },
+        error: function (error) {
+            console.log(error);
+
+        }
+    });
+}
+
+/*==================== ESTADO DE EDITORIAL ======================*/
+if (document.getElementById("estadoPrestamo")) {
+    const action = "estadoPrestamo";
+    $.ajax({
+        url: 'src/chart.php',
+        type: 'POST',
+        data: {
+            action
+        },
+        async: true,
+        success: function (response) {
+            if (response != 0) {
+                var data = JSON.parse(response);
+                var nombre = [];
+                var cantidad = [];
+                for (var i = 0; i < data.length; i++) {
+                    nombre.push(data[i]['estado']);
+                    cantidad.push(data[i]['cantidad']);
+                }
+                var ctx = document.getElementById("estadoPrestamo");
+
+                var myPieChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: { 
+                        labels: ['Devuelto', 'Prestado'],
+                        datasets: [{
+                            label: 'Estado de Prestamos',
+                            fill: false,
+                            data: cantidad,
+                            backgroundColor: [ '#28A745','#DC3545'],
                         }],
                     },
                 });
