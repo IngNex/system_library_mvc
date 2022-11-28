@@ -449,7 +449,7 @@ if (document.getElementById("personaPrestamo")) {
     });
 }
 
-/*==================== ESTADO DE EDITORIAL ======================*/
+/*==================== ESTADO DE Prestamo ======================*/
 if (document.getElementById("estadoPrestamo")) {
     const action = "estadoPrestamo";
     $.ajax({
@@ -520,13 +520,13 @@ if (document.getElementById("barPrestamo")) {
                             data: cantidad,
                             fill: false,
                             borderColor: 'rgb(54, 162, 235)'
-                          },{
+                        },{
                             type: 'bar',
                             label: 'Libros',
                             data: cantidad,
                             borderColor: 'rgb(255, 99, 132)',
                             backgroundColor: ['#48d4a0',  '#02e8f7', '#f0d662', '#ff7300', '#073ceb','#F00100','#28A745', '#540202', '#E36B2C'],
-                          }]
+                        }]
                     },
                 });
             }
@@ -537,6 +537,48 @@ if (document.getElementById("barPrestamo")) {
         }
     });
 }
+
+/*==================== ESTADO DE USUARIO ======================*/
+if (document.getElementById("estadoUser")) {
+    const action = "estadoUser";
+    $.ajax({
+        url: 'src/chart.php',
+        type: 'POST',
+        data: {
+            action
+        },
+        async: true,
+        success: function (response) {
+            if (response != 0) {
+                var data = JSON.parse(response);
+                var nombre = [];
+                var cantidad = [];
+                for (var i = 0; i < data.length; i++) {
+                    nombre.push(data[i]['estado']);
+                    cantidad.push(data[i]['cantidad']);
+                }
+                var ctx = document.getElementById("estadoUser");
+
+                var myPieChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: { 
+                        labels: ['Inactivo', 'Activo'],
+                        datasets: [{
+                            label: 'Estado de Usuarios',
+                            fill: false,
+                            data: cantidad,
+                            backgroundColor: [ '#DC3545','#007BFF'],
+                        }],
+                    },
+                });
+            }
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
+
 /*
 Chart Js
 https://www.chartjs.org/docs/latest/charts/mixed.html

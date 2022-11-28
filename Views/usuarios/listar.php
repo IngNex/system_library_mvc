@@ -135,21 +135,29 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12">
-                    <center>
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-header card-header-primary">
-                                    <center>
-                                        <h3 class="title-2 m-b-40">Roles de usuario</h3>
-                                    </center>
-                                </div>
-                                <div class="card-body">
-                                    <canvas id="dataUser"></canvas>
-                                </div>
-                            </div>
-                        </div>       
-                    </center> 
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <center>
+                                <h3 class="title-2 m-b-40">Roles de usuario</h3>
+                            </center>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="dataUser"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <center>
+                                <h3 class="title-2 m-b-40">Estado de usuario</h3>
+                            </center>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="estadoUser"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
