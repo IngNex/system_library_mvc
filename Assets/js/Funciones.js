@@ -489,3 +489,8 @@ if (document.getElementById("estadoPrestamo")) {
         }
     });
 }
+
+/*
+Chart Js
+https://www.chartjs.org/docs/latest/charts/mixed.html
+*/
