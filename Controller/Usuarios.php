@@ -9,7 +9,7 @@ class Usuarios extends Controllers
         }
         parent::__construct();
     }
-    public function listar()
+    public function usuarios()
     {
         $data = $this->model->selectUsuarios();
         $this->views->getView($this, "listar", $data);
@@ -22,7 +22,7 @@ class Usuarios extends Controllers
         $rol = $_POST['rol'];
         $hash = hash("SHA256", $clave);
         $this->model->insertarUsuarios($nombre, $usuario, $hash, $rol);
-        header("location: " . base_url() . "usuarios/listar");
+        header("location: " . base_url() . "usuarios");
         die();
     }
     public function editar()
@@ -47,14 +47,14 @@ class Usuarios extends Controllers
         } else {
             $alert =  'error';
         }
-        header("location: " . base_url() . "usuarios/listar");
+        header("location: " . base_url() . "usuarios");
         die();
     }
     public function eliminar()
     {
         $id = $_POST['id'];
         $this->model->eliminarUsuarios($id);
-        header("location: " . base_url() . "usuarios/listar");
+        header("location: " . base_url() . "usuarios");
         die();
     }
     public function reingresar()
@@ -62,7 +62,7 @@ class Usuarios extends Controllers
         $id = $_POST['id'];
         $this->model->reingresarUsuarios($id);
         $this->model->selectUsuarios();
-        header('location: ' . base_url() . 'Usuarios/Listar');
+        header('location: ' . base_url() . 'usuarios');
         die();
     }
     public function login()
@@ -97,10 +97,10 @@ class Usuarios extends Controllers
         if ($data != null || $data != "") {
             $cambio = $this->model->cambiarContra($nueva, $id);
             if ($cambio == 1) {
-                header("Location: " . base_url(). "usuarios/salir");
+                header("Location: " . base_url(). "usuarios");
             }
         }else{
-            header("Location: " . base_url() . "usuarios/listar?error");
+            header("Location: " . base_url() . "usuarios?error");
         }  
     }
     public function perfil()

@@ -60,7 +60,7 @@
                             <div class="collapse" id="collapseUser" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <h5>
-                                    <a class="nav-link active" href="<?php echo base_url(); ?>usuarios/listar"><div class="sb-nav-link-icon"><i class="fas fa-user fa-lg"></i>
+                                    <a class="nav-link active" href="<?php echo base_url(); ?>usuarios"><div class="sb-nav-link-icon"><i class="fas fa-user fa-lg"></i>
                                     </div>Usuario
                                     </a>
                                     </h5>
