@@ -141,11 +141,11 @@
                             <div class="card">
                                 <div class="card-header card-header-primary">
                                     <center>
-                                        <h3 class="title-2 m-b-40">Estado de Materias</h3>
+                                        <h3 class="title-2 m-b-40">Roles de usuario</h3>
                                     </center>
                                 </div>
                                 <div class="card-body">
-                                    <canvas id="materialEstado"></canvas>
+                                    <canvas id="dataUser"></canvas>
                                 </div>
                             </div>
                         </div>       

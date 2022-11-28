@@ -234,12 +234,13 @@ if (document.getElementById("dataUser")) {
                 }
                 var ctx = document.getElementById("dataUser");
                 var myPieChart = new Chart(ctx, {
-                    type: 'doughnut',
+                    type: 'bar',
                     data: {
-                        labels: nombre,
+                        labels: ['Administrador', 'Supervisor'],
                         datasets: [{
+                            label: 'Roles de usuario',
                             data: cantidad,
-                            backgroundColor: [ '#073ceb','#ff7300', '#F00100', '#02ab09', '#540202', '#073ceb','#ff7300', '#F00100','#E36B2C', '#02e8f7', '#f0d662', '#48d4a0', '#e3c30b'],
+                            backgroundColor: [ '#28A745','#6C757D'],
                         }],
                     },
                 });
@@ -278,6 +279,7 @@ if (document.getElementById("materialEstado")) {
                     data: { 
                         labels: ['Inactivo', 'Activo'],
                         datasets: [{
+                            label: 'Estado de Materia',
                             data: cantidad,
                             backgroundColor: ['#DC3545', '#28A745', '#d90098',  '#ff1c00', '#5e022a', '#ff005a', '#ff5800', '#52e358', '#02fafa','#fa3232'],
                         }],
