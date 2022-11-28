@@ -64,11 +64,11 @@
                                     </div>Usuario
                                     </a>
                                     </h5>
-                                    <h4>
+                                    <h5>
                                     <a class="nav-link active" href="<?php echo base_url(); ?>configuracion/listar"><div class="sb-nav-link-icon"><i class="fas fa-tools fa-lg"></i>
                                     </div>Biblioteca
                                     </a>
-                                    </h4>
+                                    </h5>
                                 </nav>
                             </div>
                             <!--<a class="nav-link active" href="<?php echo base_url(); ?>usuarios/listar">

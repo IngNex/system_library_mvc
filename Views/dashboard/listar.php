@@ -15,9 +15,9 @@
                             <div class="card card-stats">
                                 <div class="card-header card-header-warning card-header-icon">
                                     <div class="card-icon">
-                                        <a href="<?php echo base_url(); ?>usuarios/listar"><i class="fas fa-user-circle fa-2x"></i></a>
+                                        <a href="<?php echo base_url(); ?>usuarios"><i class="fas fa-user-circle fa-2x"></i></a>
                                     </div>
-                                    <a href="<?php echo base_url(); ?>usuarios/listar" class="card-category text-warning font-weight-bold">
+                                    <a href="<?php echo base_url(); ?>usuarios" class="card-category text-warning font-weight-bold">
                                         Miembros
                                     </a>
                                     <h3 class="card-title">
@@ -74,8 +74,8 @@
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="card card-stats">
                                 <div class="card-header card-header-danger card-header-icon">
-                                    <div class="card-icon">
-                                        <i class="fas fa fa-tasks fa-2x"></i>
+                                <div class="card-icon">
+                                        <a href="<?php echo base_url(); ?>admin"><i class="fas fa fa-tasks fa-2x"></i></a>
                                     </div>
                                     <a href="<?php echo base_url(); ?>admin" class="card-category text-danger font-weight-bold">
                                         Prestamos
