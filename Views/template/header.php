@@ -139,7 +139,7 @@
                     <!--Item Prestamo-->
                         <?php if ($_SESSION['rol'] == 1) { ?>
                             <h4>
-                                <a class="nav-link active" href="<?php echo base_url(); ?>admin/listar">
+                                <a class="nav-link active" href="<?php echo base_url(); ?>admin">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tasks fa-lg"></i></div>Prestamo
                                 </a>
                             </h4>

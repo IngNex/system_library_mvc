@@ -9,7 +9,7 @@
             parent::__construct();
 
         }
-        public function listar()
+        public function admin()
         {
             $libros = $this->model->selectLibros();
             $estudiantes = $this->model->selectEstudiantes();
@@ -27,13 +27,13 @@
             $observacion = $_POST['observacion'];
             $cantidadActual = $this->model->selectLibrosCantidad($libro);
             if ($cantidadActual['cantidad'] < $cantidad) {
-                header("location: " . base_url() . "admin/listar?no_s");
+                header("location: " . base_url() . "admin?no_s");
             }else{
                 $insert = $this->model->insertarPrestamo($estudiante, $libro, $fecha_prestamo, $fecha_devolucion, $cantidad, $observacion);
                 $total = ($cantidadActual['cantidad'] - $cantidad);
                 $this->model->actualizarCantidad($total, $libro);
                 if ($insert) {
-                    header("location: " . base_url() . "admin/listar");
+                    header("location: " . base_url() . "admin");
                     die();
                 }
             }
@@ -48,7 +48,7 @@
             $prest = $this->model->estadoPrestamo("", 0 , $id);
             $actualizado = $this->model->actualizarCantidad($total, $cantidadprestado['id_libro']);
             if ($actualizado && $prest) {
-                header("location: " . base_url() . "admin/listar");
+                header("location: " . base_url() . "admin");
                 die();
             }
         }
