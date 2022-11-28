@@ -490,6 +490,53 @@ if (document.getElementById("estadoPrestamo")) {
     });
 }
 
+/*==================== Prestamos de Libros ======================*/
+if (document.getElementById("barPrestamo")) {
+    const action = "barPrestamo";
+    $.ajax({
+        url: 'src/chart.php',
+        type: 'POST',
+        async: true,
+        data: {
+            action
+        },
+        success: function (response) {
+            if (response != 0) {
+                var data = JSON.parse(response);
+                var nombre = [];
+                var cantidad = [];
+                for (var i = 0; i < data.length; i++) {
+                    nombre.push(data[i]['titulo']);
+                    cantidad.push(data[i]['cantidad']);
+                }
+                var ctx = document.getElementById("barPrestamo");
+                var myPieChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: nombre,
+                        datasets: [{
+                            type: 'line',
+                            label: 'Cantidad',
+                            data: cantidad,
+                            fill: false,
+                            borderColor: 'rgb(54, 162, 235)'
+                          },{
+                            type: 'bar',
+                            label: 'Libros',
+                            data: cantidad,
+                            borderColor: 'rgb(255, 99, 132)',
+                            backgroundColor: ['#48d4a0',  '#02e8f7', '#f0d662', '#ff7300', '#073ceb','#F00100','#28A745', '#540202', '#E36B2C'],
+                          }]
+                    },
+                });
+            }
+        },
+        error: function (error) {
+            console.log(error);
+
+        }
+    });
+}
 /*
 Chart Js
 https://www.chartjs.org/docs/latest/charts/mixed.html

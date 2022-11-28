@@ -130,6 +130,18 @@ if ($_POST['action'] == 'estadoPrestamo') {
     echo json_encode($arreglo);
     die();
 }
+
+if ($_POST['action'] == 'barPrestamo') {
+    $arreglo = array();
+    $query = mysqli_query($conexion, "SELECT l.titulo as titulo, p.cantidad as cantidad FROM prestamo as p INNER JOIN libro as l WHERE p.id=l.id;");
+    while ($data = mysqli_fetch_array($query)) {
+        $arreglo[] = $data;
+    }
+    echo json_encode($arreglo);
+    die();
+}
+
+
 ?>
 
 

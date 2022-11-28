@@ -174,6 +174,22 @@
                 -->
             </div>
         </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <center>
+                                <h3 class="title-2 m-b-40">Prestamos de libros</h3>
+                            </center>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="barPrestamo"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
     </main>
     <div id="nuevoMateria" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
         <div class="modal-dialog" role="document">
