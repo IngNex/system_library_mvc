@@ -174,6 +174,12 @@
                                         Prestamos
                                     </a>
                                 </h5>
+                                <h5>
+                                    <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>admin/pdfDevuelto">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-file-pdf fa-lg"></i></div>
+                                        Reintegrados
+                                    </a>
+                                </h5>
                             </nav>
                         </div>
                     <!--End Reportes-->
