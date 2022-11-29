@@ -17,7 +17,7 @@
 
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
-        <div class="text-center"><a class="navbar-brand" href="<?php echo base_url(); ?>admin/listar">Sys<i class="fas fa-paper-plane"></i>Biblioteca | MDM</a></div>
+        <div class="text-center"><a class="navbar-brand" href="<?php echo base_url(); ?>dashboard">Sys<i class="fas fa-paper-plane"></i>Biblioteca | MDM</a></div>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars fa-lg"></i></button>
         <!-- Navbar-->
         <ul class="navbar-nav ml-auto">
@@ -178,6 +178,12 @@
                                     <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>admin/pdfDevuelto">
                                         <div class="sb-nav-link-icon"><i class="fas fa-file-pdf fa-lg"></i></div>
                                         Reintegrados
+                                    </a>
+                                </h5>
+                                <h5>
+                                    <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>autor/pdf">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-file-pdf fa-lg"></i></div>
+                                        Autores
                                     </a>
                                 </h5>
                             </nav>
