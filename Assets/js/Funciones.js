@@ -579,6 +579,44 @@ if (document.getElementById("estadoUser")) {
     });
 }
 
+/*==================== Prestamos de Libros ======================*/
+if (document.getElementById("dirCantidad")) {
+    const action = "dirCantidad";
+    $.ajax({
+        url: 'src/chart.php',
+        type: 'POST',
+        async: true,
+        data: {
+            action
+        },
+        success: function (response) {
+            if (response != 0) {
+                var data = JSON.parse(response);
+                var nombre = [];
+                var cantidad = [];
+                for (var i = 0; i < data.length; i++) {
+                    nombre.push(data[i]['direccion']);
+                    cantidad.push(data[i]['cantidad']);
+                }
+                var ctx = document.getElementById("dirCantidad");
+                var myPieChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: nombre,
+                        datasets: [{
+                            data: cantidad,
+                            backgroundColor: ['#48d4a0', '#e3c30b', '#E36B2C','#02e8f7', '#f0d662',  '#02ab09','#ff7300', '#F00100',  '#540202', '#073ceb'],
+                        }],
+                    },
+                });
+            }
+        },
+        error: function (error) {
+            console.log(error);
+
+        }
+    });
+}
 /*
 Chart Js
 https://www.chartjs.org/docs/latest/charts/mixed.html

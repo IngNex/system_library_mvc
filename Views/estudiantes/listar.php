@@ -171,7 +171,7 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="card">
                         <div class="card-header card-header-primary">
                             <center>
@@ -183,7 +183,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="card">
                         <div class="card-header card-header-primary">
                             <center>
@@ -191,12 +191,25 @@
                             </center>
                         </div>
                         <div class="card-body">
-                            <canvas id="estadoPersona"></canvas>
+                            <canvas id="dirCantidad"></canvas>
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-header card-header-primary">
+                                    <center>
+                                        <h3 class="title-2 m-b-40">Estado de Materias</h3>
+                                    </center>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="estadoPersona"></canvas>
+                                </div>
+                            </div>
+                        </div>  
             </div>
         </div>
     </main>
+    <br>
     <br>
 <?php pie() ?>

@@ -46,6 +46,16 @@ if ($_POST['action'] == 'estadoPersonaChart') {
     echo json_encode($arreglo);
     die();
 }
+if ($_POST['action'] == 'dirCantidad') {
+    $arreglo = array();
+    $query = mysqli_query($conexion, "SELECT direccion, COUNT(*) as cantidad FROM estudiante GROUP BY direccion;");
+    while ($data = mysqli_fetch_array($query)) {
+        $arreglo[] = $data;
+    }
+    echo json_encode($arreglo);
+    die();
+}
+
 /* ========== End Personas  ======== */
 
 /* ========== Querys Usuario  ======== */
@@ -123,7 +133,9 @@ if ($_POST['action'] == 'editorialChart') {
 /* ========== Querys Prestamo  ======== */
 if ($_POST['action'] == 'prestamoPersona') {
     $arreglo = array();
-    $query = mysqli_query($conexion, "SELECT e.nombre, p.cantidad FROM prestamo as p INNER JOIN estudiante as e WHERE p.id_estudiante=e.id;");
+    /*$query = mysqli_query($conexion, "SELECT e.nombre, p.cantidad FROM prestamo as p INNER JOIN estudiante as e WHERE p.id_estudiante=e.id;");*/
+    $query = mysqli_query($conexion, "SELECT e.nombre, p.cantidad,p.estado FROM prestamo as p INNER JOIN estudiante as e WHERE p.id_estudiante=e.id AND p.estado=1;");
+    
     while ($data = mysqli_fetch_array($query)) {
         $arreglo[] = $data;
     }
