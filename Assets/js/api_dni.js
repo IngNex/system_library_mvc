@@ -1,3 +1,4 @@
+
 function Buscar_reniec() {
     var dni = $("#dni").val();
     var input = document.getElementById('dni');
@@ -11,8 +12,9 @@ function Buscar_reniec() {
         $("#dni").removeClass('is-invalid').addClass("is-valid");
     }
     $.ajax({
-        url:'https://apiperu.net.pe/api/dni/'+dni,
-        /*url:'https://apiperu.dev/api/dni/'+dni,*/
+        url: 'https://apiperu.net.pe/api/dni/plus/'+dni,
+        /*url:'https://apiperu.net.pe/api/dni/'+dni,
+        url:'https://apiperu.dev/api/dni/'+dni,*/
         type:'GET',
         headers: { 
             'Authorization':'Bearer PUdDnC9j4bYdfEu5RGT7V0g3upwxayhnNMzoTN8DLqSE4XqKSA',
@@ -26,19 +28,28 @@ function Buscar_reniec() {
         if (resp1['nombres']!=undefined) {
             //$("#txtdni").prop('disabled',true);
             //$("#btn_reniec").prop('disabled',true);
-            $("#nombre").val(resp1['nombre_completo'].replace("'", ""));
-            $("#nombres").val(resp1['nombres'].replace("'", ""));
-            $("#apellido_paterno").val(resp1['apellido_paterno'].replace("'", ""));
-            $("#apellido_materno").val(resp1['apellido_materno'].replace("'", ""));
-            $("#departamento").val(resp1['departamento'].replace("'", ""));
-            $("#provincia").val(resp1['provincia'].replace("'", ""));
-            $("#distrito").val(resp1['distrito'].replace("'", ""));
-            $("#direccion").val(resp1['direccion'].replace("'", ""));
+            $("#nombre").val(mayusPrimeraLetraDeOracion(resp1['nombre_completo'].replace("'", "")));
+            $("#nombres").val(mayusPrimeraLetraDeOracion(resp1['nombres'].replace("'", "")));
+            $("#apellido_paterno").val(mayusPrimeraLetraDeOracion(resp1['apellido_paterno'].replace("'", "")));
+            $("#apellido_materno").val(mayusPrimeraLetraDeOracion(resp1['apellido_materno'].replace("'", "")));
+            $("#civil").val(resp1['estado_civil'].replace("'", ""));
+            $("#genero").val(resp1['sexo'].replace("'", ""));
+            $("#edads").val(resp1['edad'].replace("'", ""));
+            $("#departamento").val(mayusPrimeraLetraDeOracion(resp1['departamento'].replace("'", "")));
+            $("#provincia").val(mayusPrimeraLetraDeOracion(resp1['provincia'].replace("'", "")));
+            $("#distrito").val(mayusPrimeraLetraDeOracion(resp1['distrito'].replace("'", "")));
+            $("#direccion").val(mayusPrimeraLetraDeOracion(resp1['direccion'].replace("'", "")));
         }else{
             $("#nombre").val("");
             $("#nombres").val("");
             $("#apellido_paterno").val("");
             $("#apellido_materno").val("");
+            $("#civil").val("");
+            $("#genero").val("");
+            $("#edads").val("");
+            $("#departamento").val("");
+            $("#provincia").val("");
+            $("#distrito").val("");
             $("#direccion").val("");
             Swal.fire("Mensaje de Advertencia","<b style='color:#9B0000'>Lo sentimos el dni ingresado no se encuentro en los archivos de la reniec</b>","warning");
         }
@@ -59,3 +70,21 @@ function Buscar_reniec() {
         }
     })
 }
+
+function mayusPrimeraLetraDeOracion(oracion) {
+    let palabras = oracion.split(" ").map(palabra => {
+        return palabra[0] + palabra.slice(1).toLowerCase();
+    })
+    return palabras.join(" ");
+}
+
+/*
+ $("#nombre").val(mayusPrimeraLetraDeOracion(resp1['nombre_completo'].replace("'", "")));
+            $("#nombres").val(mayusPrimeraLetraDeOracion(resp1['nombres'].replace("'", "")));
+            $("#apellido_paterno").val(mayusPrimeraLetraDeOracion(resp1['apellido_paterno'].replace("'", "")));
+            $("#apellido_materno").val(resp1['apellido_materno'].replace("'", ""));
+            $("#departamento").val(resp1['departamento'].replace("'", ""));
+            $("#provincia").val(resp1['provincia'].replace("'", ""));
+            $("#distrito").val(resp1['distrito'].replace("'", ""));
+            $("#direccion").val(resp1['direccion'].replace("'", ""));
+*/

@@ -20,7 +20,7 @@ class Estudiantes extends Controllers
         $dni = $_POST['dni'];
         $nombre = $_POST['nombre'];
         $carrera = $_POST['carrera'];
-        $direccion = $_POST['direccion'];
+        $direccion = $_POST['distrito'];
         $telefono = $_POST['telefono'];
         $insert = $this->model->insertarEstudiante($codigo, $dni, $nombre, $carrera, $direccion, $telefono);
         if ($insert) {
@@ -45,7 +45,7 @@ class Estudiantes extends Controllers
         $dni = $_POST['dni'];
         $nombre = $_POST['nombre'];
         $carrera = $_POST['carrera'];
-        $direccion = $_POST['direccion'];
+        $direccion = $_POST['distrito'];
         $telefono = $_POST['telefono'];
         $actualizar = $this->model->actualizarEstudiante($codigo, $dni, $nombre, $carrera, $direccion, $telefono, $id);
         if ($actualizar) {   

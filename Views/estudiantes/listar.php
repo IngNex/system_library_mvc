@@ -16,7 +16,7 @@
                                     <th>DNI</th>
                                     <th>Nombre Completo</th>
                                     <th>Educación</th>
-                                    <th>Dirección</th>
+                                    <th>Distrito</th>
                                     <th>Celular</th>
                                     <th>&nbsp;&nbsp;Estado&nbsp;&nbsp;</th>
                                     <th>&nbsp;&nbsp;&nbsp;&nbsp;Accion&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -78,13 +78,6 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="codigo">Código</label>
-                                    <input id="codigo" class="form-control" type="text" name="codigo" required placeholder="Codigo de la persona">
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
                                     <label for="dni">Dni</label>
                                     <div class="input-group margin">
                                     <input id="dni" class="form-control" type="text" name="dni" required placeholder="Dni" maxlength="8">
@@ -94,7 +87,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="codigo">Código</label>
+                                    <input id="codigo" class="form-control" type="text" name="codigo" required placeholder="Codigo" value="BI">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nombres">Nombres</label>
+                                    <input id="nombres" class="form-control" type="text" name="nombres" required placeholder="Nombres" >
+                                </div>
+                            </div>
+                            <!--- ============ NOMBRE COMPLETO NOT VIEW ============== -->
+                            <div class="col-md-14">
                                 <div class="form-group">
                                     <!--<label for="nombre">Nombre Completo</label>-->
                                     <input style="text-transform:capitalize;" id="nombre" class="form-control" type="hidden" name="nombre" required placeholder="Nombre completo"  >
@@ -112,10 +119,22 @@
                                     <input id="apellido_materno" class="form-control" type="text" name="apellido_materno" required placeholder="Apellido Materno" >
                                 </div>
                             </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="genero">Género</label>
+                                    <input id="genero" class="form-control" type="text" name="genero" required placeholder="Género" >
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="edads">Edad</label>
+                                    <input id="edads" class="form-control" type="text" name="edads" required placeholder="Edad" >
+                                </div>
+                            </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="nombres">Nombres</label>
-                                    <input id="nombres" class="form-control" type="text" name="nombres" required placeholder="Nombres" >
+                                    <label for="civil">Estado Civil</label>
+                                    <input id="civil" class="form-control" type="text" name="civil" required placeholder="Estado Civil" >
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -143,13 +162,13 @@
                                     <input id="direccion" class="form-control" type="text" name="direccion" required placeholder="Dirección">
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="carrera">Nivel de Educación</label>
                                     <input id="carrera" class="form-control" type="text" name="carrera" required placeholder="Nivel de Educación">
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="telefono">Celular</label>
                                     <input id="telefono" class="form-control" type="text" name="telefono" required placeholder="Teléfono">
@@ -187,7 +206,7 @@
                     <div class="card">
                         <div class="card-header card-header-primary">
                             <center>
-                                <h3 class="title-2 m-b-40">Estado de personas</h3>
+                                <h3 class="title-2 m-b-40">Personas por Distrito</h3>
                             </center>
                         </div>
                         <div class="card-body">
@@ -199,7 +218,7 @@
                             <div class="card">
                                 <div class="card-header card-header-primary">
                                     <center>
-                                        <h3 class="title-2 m-b-40">Estado de Materias</h3>
+                                        <h3 class="title-2 m-b-40">Estado de Personas</h3>
                                     </center>
                                 </div>
                                 <div class="card-body">

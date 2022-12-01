@@ -47,8 +47,8 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label for="direccion">Dirección</label>
-                                            <input id="direccion" class="form-control" type="text" name="direccion" value="<?php echo $data['direccion']; ?>">
+                                            <label for="distrito">Dirección</label>
+                                            <input id="distrito" class="form-control" type="text" name="distrito" value="<?php echo $data['direccion']; ?>">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
