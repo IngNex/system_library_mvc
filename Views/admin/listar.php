@@ -140,11 +140,11 @@ include("./conexion.php");
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                             <div class="card">
                                 <div class="card-header card-header-primary">
                                     <center>
-                                        <h3 class="title-2 m-b-40">Libros por Personas</h3>
+                                        <h3 class="title-2 m-b-40">Personas con Prestamo</h3>
                                     </center>
                                 </div>
                                 <div class="card-body">
@@ -152,7 +152,7 @@ include("./conexion.php");
                                 </div>
                             </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header card-header-primary">
                             <center>
@@ -164,7 +164,7 @@ include("./conexion.php");
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <!--<div class="col-lg-6">
                     <div class="card">
                         <div class="card-header card-header-primary">
                             <center>
@@ -175,6 +175,30 @@ include("./conexion.php");
                             <canvas id="estadoPrestamo"></canvas>
                         </div>
                     </div>
+                </div>-->
+            </div>
+        </div>
+    </main>
+    <br>
+    <br>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <center>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header card-header-primary">
+                                    <center>
+                                        <h3 class="title-2 m-b-40">Estado de Prestamos</h3>
+                                    </center>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="estadoPrestamo"></canvas>
+                                </div>
+                            </div>
+                        </div>       
+                    </center> 
                 </div>
             </div>
         </div>
