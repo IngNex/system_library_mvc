@@ -157,6 +157,18 @@
                         <div class="collapse" id="collapseEst" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <h5>
+                                    <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>admin/pdf">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-file-download fa-lg"></i></div>
+                                        Prestamos
+                                    </a>
+                                </h5>
+                                <h5>
+                                    <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>admin/pdfDevuelto">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-file-upload fa-lg"></i></div>
+                                        Reintegrados
+                                    </a>
+                                </h5>
+                                <h5>
                                     <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>estudiantes/pdf">
                                         <div class="sb-nav-link-icon"><i class="fas fa-address-book fa-lg"></i></div>
                                         Personas
@@ -169,20 +181,8 @@
                                     </a>
                                 </h5>
                                 <h5>
-                                    <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>admin/pdf">
-                                        <div class="sb-nav-link-icon"><i class="fas fa-file-download fa-lg"></i></div>
-                                        Prestamos
-                                    </a>
-                                </h5>
-                                <h5>
-                                    <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>admin/pdfDevuelto">
-                                        <div class="sb-nav-link-icon"><i class="fas fa-file-pdf fa-lg"></i></div>
-                                        Reintegrados
-                                    </a>
-                                </h5>
-                                <h5>
                                     <a class="nav-link active" target="_blank" href="<?php echo base_url(); ?>autor/pdf">
-                                        <div class="sb-nav-link-icon"><i class="fas fa-file-pdf fa-lg"></i></div>
+                                        <div class="sb-nav-link-icon"><i class="fas fa-file-alt fa-lg"></i></div>
                                         Autores
                                     </a>
                                 </h5>
