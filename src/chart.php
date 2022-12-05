@@ -95,7 +95,7 @@ if ($_POST['action'] == 'materialChart') {
 /* ========== Querys Libro  ======== */
 if ($_POST['action'] == 'libroChart') {
     $arreglo = array();
-    $query = mysqli_query($conexion, "SELECT titulo, cantidad FROM libro;");
+    $query = mysqli_query($conexion, "SELECT titulo, cantidad FROM libro ORDER BY cantidad;");
     
     while ($data = mysqli_fetch_array($query)) {
         $arreglo[] = $data;
@@ -103,7 +103,16 @@ if ($_POST['action'] == 'libroChart') {
     echo json_encode($arreglo);
     die();
 }
-
+if ($_POST['action'] == 'estadoLiChart') {
+    $arreglo = array();
+    $query = mysqli_query($conexion, "SELECT estado, count(*) AS cantidad FROM libro GROUP BY estado;");
+    
+    while ($data = mysqli_fetch_array($query)) {
+        $arreglo[] = $data;
+    }
+    echo json_encode($arreglo);
+    die();
+}
 /* ========== Querys Autor  ======== */
 
 if ($_POST['action'] == 'autorChart') {

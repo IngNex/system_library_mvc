@@ -320,7 +320,7 @@ if (document.getElementById("libroCantidad")) {
                         labels: nombre,
                         datasets: [{
                             data: cantidad,
-                            backgroundColor: ['#053cf0', '#ffff00', '#d90098',  '#ff1c00', '#5e022a', '#ff005a', '#ff5800', '#52e358', '#02fafa','#fa3232'],
+                            backgroundColor: ['#053cf0', '#ff1c00','#ffff00', '#d90098', '#ff5800', '#52e358', '#02fafa','#5e022a', '#ff005a',  '#fa3232'],
                         }],
                     },
                 });
@@ -537,7 +537,46 @@ if (document.getElementById("barPrestamo")) {
         }
     });
 }
+/*==================== ESTADO DE LIBRO ======================*/
+if (document.getElementById("estadoLiChart")) {
+    const action = "estadoLiChart";
+    $.ajax({
+        url: 'src/chart.php',
+        type: 'POST',
+        data: {
+            action
+        },
+        async: true,
+        success: function (response) {
+            if (response != 0) {
+                var data = JSON.parse(response);
+                var nombre = [];
+                var cantidad = [];
+                for (var i = 0; i < data.length; i++) {
+                    nombre.push(data[i]['estado']);
+                    cantidad.push(data[i]['cantidad']);
+                }
+                var ctx = document.getElementById("estadoLiChart");
 
+                var myPieChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: { 
+                        labels: ['Inactivo', 'Activo'],
+                        datasets: [{
+                            label: 'Estado de Libros',
+                            fill: false,
+                            data: cantidad,
+                            backgroundColor: [ '#DC3545','#007BFF'],
+                        }],
+                    },
+                });
+            }
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
 /*==================== ESTADO DE USUARIO ======================*/
 if (document.getElementById("estadoUser")) {
     const action = "estadoUser";
