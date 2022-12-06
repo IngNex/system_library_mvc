@@ -10,8 +10,6 @@ if ($_POST['action'] == 'sales') {
     echo json_encode($arreglo);
     die();
 }
-
-
 if ($_POST['action'] == 'polarChart') {
     $arreglo = array();
     /* SELECT * FROM prestamo as p INNER JOIN libro as l WHERE p.id=l.id; 
@@ -24,7 +22,6 @@ if ($_POST['action'] == 'polarChart') {
     echo json_encode($arreglo);
     die();
 }
-
 /* ========== Querys Personas  ======== */
 if ($_POST['action'] == 'personasChart') {
     $arreglo = array();
@@ -55,7 +52,6 @@ if ($_POST['action'] == 'dirCantidad') {
     echo json_encode($arreglo);
     die();
 }
-
 /* ========== End Personas  ======== */
 
 /* ========== Querys Usuario  ======== */
@@ -69,7 +65,6 @@ if ($_POST['action'] == 'usuarioChart') {
     echo json_encode($arreglo);
     die();
 }
-
 if ($_POST['action'] == 'estadoUser') {
     $arreglo = array();
     $query = mysqli_query($conexion, "SELECT estado , count(*) AS cantidad FROM usuarios GROUP BY estado;");
@@ -91,7 +86,6 @@ if ($_POST['action'] == 'materialChart') {
     echo json_encode($arreglo);
     die();
 }
-
 /* ========== Querys Libro  ======== */
 if ($_POST['action'] == 'libroChart') {
     $arreglo = array();
@@ -114,7 +108,6 @@ if ($_POST['action'] == 'estadoLiChart') {
     die();
 }
 /* ========== Querys Autor  ======== */
-
 if ($_POST['action'] == 'autorChart') {
     $arreglo = array();
     $query = mysqli_query($conexion, "SELECT estado , count(*) AS cantidad FROM autor GROUP BY estado;");
@@ -125,7 +118,6 @@ if ($_POST['action'] == 'autorChart') {
     echo json_encode($arreglo);
     die();
 }
-
 /* ========== Querys Editorial  ======== */
 if ($_POST['action'] == 'editorialChart') {
     $arreglo = array();
@@ -137,8 +129,6 @@ if ($_POST['action'] == 'editorialChart') {
     echo json_encode($arreglo);
     die();
 }
-
-
 /* ========== Querys Prestamo  ======== */
 if ($_POST['action'] == 'prestamoPersona') {
     $arreglo = array();
